@@ -65,6 +65,24 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                     <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
                 </Link>
             </Typography>
+            <Typography
+            as="li"
+            variant="small"
+            color={isDarkMode ? "white" : "text-cyan-400"}
+            className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "skill" ? 'underline' : ''}`}
+        >
+            <Link
+                to="skill"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className={`flex items-center ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
+                onClick={() => handleLinkClick("skill")} // Handle link click and set active link
+            >
+                Skills
+                <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
+            </Link>
+        </Typography>
         </ul>
     );
 
@@ -77,7 +95,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
             >
                 <div className="flex items-center justify-between text-cyan-400">
                     <div className="flex items-center">
-                        <img src={imageSource} alt="Logo" className="h-24 w-24 ml-5" /> {/* Logo lebih besar */}
+                        <img src={imageSource} alt="Logo" className="h-20 w-20 ml-5" /> {/* Logo lebih besar */}
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>
