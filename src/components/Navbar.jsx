@@ -1,12 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Collapse, Typography, IconButton, Switch } from "@material-tailwind/react";
-import { Link } from "react-scroll";
+import { Navbar, Collapse, Typography, IconButton, Button } from "@material-tailwind/react";
+import { Link } from "react-scroll";// Update import statement for icons
 import logoWhite from '../../public/img/logo-white.png';
 import logo from '../../public/img/logo.png';
+import { SunIcon , MoonIcon } from "@heroicons/react/16/solid";
 
 export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
     const [openNav, setOpenNav] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
+    const [activeLink, setActiveLink] = useState("home"); // State to manage active link
     const imageSource = isDarkMode ? logoWhite : logo;
 
     useEffect(() => {
@@ -20,22 +22,28 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
         };
     }, []);
 
+    const handleLinkClick = (link) => {
+        setActiveLink(link); // Set the active link when clicked
+    };
+
     const navList = (
         <ul className="ml-2 mt-2 mb-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
             <Typography
                 as="li"
                 variant="small"
                 color={isDarkMode ? "white" : "text-cyan-400"}
-                className="p-1 font-bold text-2xl"
+                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "home" ? 'underline' : ''}`}
             >
                 <Link
                     to="home"
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className={`flex items-center cursor-pointer ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
+                    className={`flex items-center ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
+                    onClick={() => handleLinkClick("home")} // Handle link click and set active link
                 >
                     Home
+                    <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
                 </Link>
             </Typography>
 
@@ -43,16 +51,18 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                 as="li"
                 variant="small"
                 color={isDarkMode ? "white" : "text-cyan-400"}
-                className="p-1 font-bold text-2xl"
+                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "about" ? 'underline' : ''}`}
             >
                 <Link
                     to="about"
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className={`flex items-center cursor-pointer ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
+                    className={`flex items-center ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
+                    onClick={() => handleLinkClick("about")} // Handle link click and set active link
                 >
                     About
+                    <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
                 </Link>
             </Typography>
         </ul>
@@ -71,18 +81,19 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>
-                        <Switch
-                            checked={isDarkMode}
-                            onChange={toggleDarkMode}
-                            color="blue"
-                            className="h-full w-full"
-                            containerProps={{
-                                className: "w-11 h-6",
-                            }}
-                            circleProps={{
-                                className: "before:hidden left-0.5 border-none",
-                            }}
-                        />
+                        <IconButton
+                        color="light"
+                        onClick={toggleDarkMode}
+                        ripple="light"
+                        className={`h-14 w-14 rounded-full flex items-center justify-center shadow-xl ${isDarkMode ? 'bg-gray-700' : ' bg-gray-700'}`}
+                    >
+                        {isDarkMode ? (
+                            <SunIcon className="w-6 h-6 text-white" />
+                        ) : (
+                            <MoonIcon className="w-6 h-6 text-cyan-400" />
+                        )}
+                    </IconButton>
+                    
                         <IconButton
                             variant="text"
                             className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
