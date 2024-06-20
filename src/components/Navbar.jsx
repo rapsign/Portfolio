@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Navbar, Collapse, Typography, IconButton, Button } from "@material-tailwind/react";
-import { Link } from "react-scroll";// Update import statement for icons
+import { Navbar, Collapse, Typography, IconButton } from "@material-tailwind/react";
+import { Link } from "react-scroll";
 import logoWhite from '../../public/img/logo-white.png';
 import logo from '../../public/img/logo.png';
-import { SunIcon , MoonIcon } from "@heroicons/react/16/solid";
+import { SunIcon, MoonIcon } from "@heroicons/react/24/solid";
 
 export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
     const [openNav, setOpenNav] = useState(false);
     const [scrollPosition, setScrollPosition] = useState(0);
-    const [activeLink, setActiveLink] = useState("home"); // State to manage active link
+    const [activeLink, setActiveLink] = useState("home");
     const imageSource = isDarkMode ? logoWhite : logo;
 
     useEffect(() => {
@@ -23,7 +23,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
     }, []);
 
     const handleLinkClick = (link) => {
-        setActiveLink(link); // Set the active link when clicked
+        setActiveLink(link);
     };
 
     const navList = (
@@ -31,90 +31,90 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
             <Typography
                 as="li"
                 variant="small"
-                color={isDarkMode ? "white" : "text-cyan-400"}
-                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "home" ? 'underline' : ''}`}
+                color={isDarkMode ? "white" : ""}
+                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "home" ? 'underline text-cyan-400' : ''}`}
             >
                 <Link
                     to="home"
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className={`flex items-center ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
-                    onClick={() => handleLinkClick("home")} // Handle link click and set active link
+                    className="flex items-center hover:text-cyan-400"
+                    onClick={() => handleLinkClick("home")}
                 >
                     Home
-                    <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
                 </Link>
             </Typography>
 
             <Typography
                 as="li"
                 variant="small"
-                color={isDarkMode ? "white" : "text-cyan-400"}
-                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "about" ? 'underline' : ''}`}
+                color={isDarkMode ? "white" : ""}
+                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "about" ? 'underline text-cyan-400' : ''}`}
             >
                 <Link
                     to="about"
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className={`flex items-center ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
-                    onClick={() => handleLinkClick("about")} // Handle link click and set active link
+                    className="flex items-center hover:text-cyan-400"
+                    onClick={() => handleLinkClick("about")}
                 >
                     About
-                    <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
                 </Link>
             </Typography>
+
             <Typography
-            as="li"
-            variant="small"
-            color={isDarkMode ? "white" : "text-cyan-400"}
-            className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "skill" ? 'underline' : ''}`}
-        >
-            <Link
-                to="skill"
-                spy={true}
-                smooth={true}
-                duration={500}
-                className={`flex items-center ${isDarkMode ? 'hover:text-cyan-400' : 'hover:text-[#3a3a3c]'}`}
-                onClick={() => handleLinkClick("skill")} // Handle link click and set active link
+                as="li"
+                variant="small"
+                color={isDarkMode ? "white" : ""}
+                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "skill" ? 'underline text-cyan-400' : ''}`}
             >
-                Skills
-                <span className="ml-1" style={{marginBottom: '4px'}}> </span> {/* Add space */}
-            </Link>
-        </Typography>
+                <Link
+                    to="skill"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    className="flex items-center hover:text-cyan-400"
+                    onClick={() => handleLinkClick("skill")}
+                >
+                    Skills
+                </Link>
+            </Typography>
         </ul>
     );
 
     return (
         <>
+        
             <Navbar
                 className={`sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 
                     ${scrollPosition > 0 ? 'bg-opacity-50 backdrop-blur' : ''} 
-                    ${isDarkMode ? 'bg-[#020617] text-white' : 'bg-gray-100 text-gray-700'} border-none`}
+                    ${isDarkMode ? 'bg-[#0e1b31] text-white' : 'bg-gray-100 text-[#3c3c3c]'} border-none`}
             >
-                <div className="flex items-center justify-between text-cyan-400">
+            <div className="container mx-auto ">
+                <div className="flex items-center justify-between text-[#3c3c3c]">
                     <div className="flex items-center">
-                        <img src={imageSource} alt="Logo" className="h-20 w-20 ml-5" /> {/* Logo lebih besar */}
+                        <img src={imageSource} alt="Logo" className="h-20 w-20 ml-5" />
                     </div>
                     <div className="flex items-center gap-4">
                         <div className="mr-4 hidden lg:block">{navList}</div>
                         <IconButton
-                        color="light"
-                        onClick={toggleDarkMode}
-                        ripple="light"
-                        className={`h-14 w-14 rounded-full flex items-center justify-center shadow-xl ${isDarkMode ? 'bg-gray-700' : ' bg-gray-700'}`}
-                    >
-                        {isDarkMode ? (
-                            <SunIcon className="w-6 h-6 text-white" />
-                        ) : (
-                            <MoonIcon className="w-6 h-6 text-cyan-400" />
-                        )}
-                    </IconButton>
-                    
+                            color="light"
+                            onClick={toggleDarkMode}
+                            ripple="light"
+                            className={`h-14 w-14 rounded-full flex items-center justify-center shadow-xl ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}
+                        >
+                            {isDarkMode ? (
+                                <SunIcon className="w-5 h-5 text-white" />
+                            ) : (
+                                <MoonIcon className="w-5 h-5 text-[#3c3c3c]" />
+                            )}
+                        </IconButton>
+
                         <IconButton
                             variant="text"
-                            className="ml-auto h-6 w-6 text-inherit hover:bg-transparent focus:bg-transparent active:bg-transparent lg:hidden"
+                            className="ml-auto h-16 w-16 text-inherit bg-cyan-400 text-white hover:bg-transparent focus:bg-cyan-400 active:bg-cyan-400 lg:hidden"
                             ripple={false}
                             onClick={() => setOpenNav(!openNav)}
                             aria-label={openNav ? "Close Navigation" : "Open Navigation"}
@@ -152,10 +152,14 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                         </IconButton>
                     </div>
                 </div>
+                </div>
                 <Collapse open={openNav}>
-                    {navList}
-                </Collapse>
+                <div className="flex items-center justify-center">
+                  {navList}
+                </div>
+              </Collapse>
             </Navbar>
+            
         </>
     );
 }

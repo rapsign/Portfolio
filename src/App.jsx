@@ -1,11 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { StickyNavbar } from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skill from './pages/Skill';
 
 const App = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+        return localStorage.getItem('theme') === 'dark';
+    });
+
+    useEffect(() => {
+        if (isDarkMode) {
+            document.body.classList.add('dark');
+            localStorage.setItem('theme', 'dark');
+        } else {
+            document.body.classList.remove('dark');
+            localStorage.setItem('theme', 'light');
+        }
+    }, [isDarkMode]);
 
     const toggleDarkMode = () => {
         setIsDarkMode(!isDarkMode);
@@ -14,10 +26,12 @@ const App = () => {
     return (
         <>
             <StickyNavbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-            <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-            <About />
-            <Skill isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-            </>
+            <div className="container mx-auto">
+                <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                <About />
+                <Skill isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+            </div>
+        </>
     );
 }
 

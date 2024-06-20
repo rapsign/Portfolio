@@ -51,7 +51,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
     };
 
     return (
-        <section id="home" className={`min-h-screen flex flex-col items-center justify-center ${isDarkMode ? 'bg-[#353845]' : 'bg-gray-100'} relative`}>
+        <section id="home" className={`min-h-screen flex flex-col items-center justify-center ${isDarkMode ? 'bg-[#0e1b31]' : 'bg-gray-100'} relative`}>
             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full">
                 <motion.div
                     className="col-span-1 flex justify-center items-center p-6"
@@ -61,9 +61,9 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 >
                     <div className="">
                         <h4 className={`text-xl font-medium ${textColor}`}>HI, WELCOME</h4>
-                        <h1 className={`text-9xl font-bold ${textColor}`}>I'M <span className={`text-9xl font-bold ${highlightColor}`}>ALDI</span></h1>
+                        <h1 className={`text-8xl font-bold ${textColor}`}>I'M <span className={`text-8xl font-bold ${highlightColor}`}>ALDI</span></h1>
                         <motion.h1
-                            className={`text-4xl font-bold ${textColor} mb-4`}
+                            className={`text-3xl font-bold ${textColor} mb-4`}
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 1.5 }}
@@ -93,7 +93,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                                 </Button>
                             </a>
                         </div>
-                        <Button onClick={handleDownloadCV} className={`flex items-center gap-3 bg-cyan-400 text-[#3c3c3c] ${hoverColor}`}>
+                        <Button onClick={handleDownloadCV} className={`flex items-center gap-3 bg-cyan-400 text-[#3c3c3c] hover:text-white`}>
                             Download CV
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
