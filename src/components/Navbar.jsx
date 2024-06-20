@@ -27,7 +27,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
     };
 
     const navList = (
-        <ul className="ml-2 mt-2 mb-4 flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
+        <ul className="ml-2 mt-2 mb-4  flex flex-col gap-4 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-10">
             <Typography
                 as="li"
                 variant="small"
@@ -39,7 +39,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className="flex items-center hover:text-cyan-400"
+                    className="flex items-center  hover:text-cyan-400"
                     onClick={() => handleLinkClick("home")}
                 >
                     Home
@@ -75,12 +75,46 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                     spy={true}
                     smooth={true}
                     duration={500}
-                    className="flex items-center hover:text-cyan-400"
+                    className="flex items-center  hover:text-cyan-400"
                     onClick={() => handleLinkClick("skill")}
                 >
                     Skills
                 </Link>
             </Typography>
+            <Typography
+                as="li"
+                variant="small"
+                color={isDarkMode ? "white" : ""}
+                className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "education" ? 'underline text-cyan-400' : ''}`}
+            >
+                <Link
+                    to="education"
+                    spy={true}
+                    smooth={true}
+                    duration={500}
+                    className="flex items-center  hover:text-cyan-400"
+                    onClick={() => handleLinkClick("education")}
+                >
+                    Educations
+                </Link>
+            </Typography>
+            <Typography
+            as="li"
+            variant="small"
+            color={isDarkMode ? "white" : ""}
+            className={`p-1 font-bold text-2xl cursor-pointer ${activeLink === "portfolio" ? 'underline text-cyan-400' : ''}`}
+        >
+            <Link
+                to="portfolio"
+                spy={true}
+                smooth={true}
+                duration={500}
+                className="flex items-center  hover:text-cyan-400"
+                onClick={() => handleLinkClick("portfolio")}
+            >
+                Portfolio
+            </Link>
+        </Typography>
         </ul>
     );
 
@@ -88,7 +122,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
         <>
         
             <Navbar
-                className={`sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 
+                className={`fixed top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 
                     ${scrollPosition > 0 ? 'bg-opacity-50 backdrop-blur' : ''} 
                     ${isDarkMode ? 'bg-[#0e1b31] text-white' : 'bg-gray-100 text-[#3c3c3c]'} border-none`}
             >
@@ -158,8 +192,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                   {navList}
                 </div>
               </Collapse>
-            </Navbar>
-            
+            </Navbar>          
         </>
     );
 }

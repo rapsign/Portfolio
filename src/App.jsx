@@ -3,6 +3,8 @@ import { StickyNavbar } from './components/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
 import Skill from './pages/Skill';
+import Education from './pages/Education'
+import Portfolio from './pages/Portfolio';
 
 const App = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -30,6 +32,8 @@ const App = () => {
                 <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
                 <About />
                 <Skill isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                <Education isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                <Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
             </div>
         </>
     );

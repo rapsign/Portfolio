@@ -32,9 +32,9 @@ const Skill = ({ isDarkMode }) => {
       };
   return (
     <section id="skill" className={`${bgColor} min-h-screen flex flex-col items-center justify-center`}>
-        <h1 className={`text-6xl font-bold my-5 ${titleColor}`}>My Skills</h1>
-        <hr className={`border-t-8 ${borderColor} w-24 mb-5`} />
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full">
+        <h1 className={`text-5xl font-bold mt-9 ${titleColor}`}>My Skills</h1>
+        <hr className={`border-t-8 ${borderColor} w-24 mt-4 mb-4`} />
+        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full -mb-5">
             <motion.div
             className="col-span-1 flex justify-center items-center p-6 lg:justify-end"
             initial={{ opacity: 0, y: 50 }}
@@ -52,11 +52,11 @@ const Skill = ({ isDarkMode }) => {
                             Tools
                         </span>
                     </div>  
-                    <div className="grid grid-cols-4 gap-10 justify-center mb-4">
+                    <div className="grid grid-cols-4 gap-6 justify-center mb-4">
                     {showTechStack &&
                     [
-                        { name: "HTML5", level: "Advanced", img: "https://symbols.getvecta.com/stencil_25/37_html5.d4d8050235.svg", desc:"HTML is the standard markup language for Web Pages "},
-                        { name: "CSS3", level: "Advanced", img: "https://symbols.getvecta.com/stencil_25/14_css3.d930bfb832.svg", desc:"CSS is language we use to style an HTML document" },
+                        { name: "HTML", level: "Advanced", img: "https://symbols.getvecta.com/stencil_25/37_html5.d4d8050235.svg", desc:"HTML is the standard markup language for Web Pages "},
+                        { name: "CSS", level: "Advanced", img: "https://symbols.getvecta.com/stencil_25/14_css3.d930bfb832.svg", desc:"CSS is language we use to style an HTML document" },
                         { name: "JavaScript", level: "Intermediate", img: "https://symbols.getvecta.com/stencil_25/41_javascript.0ca26ec4ab.svg", desc:"High-level programming language for creating interactive effects within web browsers."},
                         { name: "Bootstrap", level: "Advanced", img: "https://symbols.getvecta.com/stencil_25/5_bootstrap.bbf5d3d59c.svg", desc:"Front-end framework for developing responsive and mobile-first websites with pre-built components and grid layouts." },
                         { name: "MySQL", level: "Advanced", img: "https://symbols.getvecta.com/stencil_261/27_mysql.4e2ff8ff6c.svg", desc:"Open-source relational database management system known for its reliability and performance." },
@@ -74,7 +74,7 @@ const Skill = ({ isDarkMode }) => {
                         whileHover={{ y: -10 }}
                         >
                          <Button
-                            className={`flex justify-center cursor-default items-center w-16 h-16 sm:w-14 sm:h-14 md:w-20 md:h-20 lg:w-22 lg:h-22 rounded-full shadow-md p-0 ${isDarkMode ? 'bg-[#0a244d] shadow-lg' : 'bg-white shadow'}`}
+                            className={`flex justify-center cursor-default items-center w-12 h-12 sm:w-14 sm:h-14 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full shadow-md p-0 ${isDarkMode ? 'bg-[#0a244d] shadow-lg' : 'bg-white shadow'}`}
                             onMouseEnter={() => handleMouseEnter(skill.name)}
                             onMouseLeave={handleMouseLeave}
                         >

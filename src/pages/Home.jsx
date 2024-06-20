@@ -129,7 +129,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 </div>
             </div>
             {isVisible ? (
-                <div className="flex justify-center z-100 absolute bottom-40 animate-bounce transition-opacity duration-1000 ease-in-out">
+                <div className="flex justify-center z-100 absolute bottom-5 animate-bounce transition-opacity duration-1000 ease-in-out">
                     <Link to="about" smooth={true} duration={500}>
                         <Button className={`rounded-full p-5 bg-cyan-400 ${hoverColor}`}>
                             <span className="flex items-center text-[#3a3a3c]">
@@ -142,7 +142,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                     </Link>
                 </div>
             ) : (
-                <div className="flex justify-center z-100 absolute bottom-40 opacity-0 transition-opacity duration-1000 ease-in-out">
+                <div className="flex justify-center z-100 absolute bottom-5 opacity-0 transition-opacity duration-1000 ease-in-out">
                     <Link to="about" smooth={true} duration={900}>
                         <Button className={`rounded-full p-5 bg-cyan-400 ${hoverColor}`}>
                             <span className="flex items-center text-[#3a3a3c]">
