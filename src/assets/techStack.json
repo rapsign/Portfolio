@@ -1,0 +1,13 @@
+[
+    { "name": "HTML", "level": "Advanced", "img": "https://symbols.getvecta.com/stencil_25/37_html5.d4d8050235.svg", "desc": "HTML is the standard markup language for Web Pages" },
+    { "name": "CSS", "level": "Advanced", "img": "https://symbols.getvecta.com/stencil_25/14_css3.d930bfb832.svg", "desc": "CSS is language we use to style an HTML document" },
+    { "name": "JavaScript", "level": "Intermediate", "img": "https://symbols.getvecta.com/stencil_25/41_javascript.0ca26ec4ab.svg", "desc": "High-level programming language for creating interactive effects within web browsers."},
+    { "name": "Bootstrap", "level": "Advanced", "img": "https://symbols.getvecta.com/stencil_25/5_bootstrap.bbf5d3d59c.svg", "desc": "Front-end framework for developing responsive and mobile-first websites with pre-built components and grid layouts." },
+    { "name": "MySQL", "level": "Advanced", "img": "https://symbols.getvecta.com/stencil_261/27_mysql.4e2ff8ff6c.svg", "desc": "Open-source relational database management system known for its reliability and performance." },
+    { "name": "PHP", "level": "Advanced", "img": "https://www.php.net//images/logos/new-php-logo.svg", "desc": "Server-side scripting language for generating dynamic web pages and interacting with databases." },
+    { "name": "Codeigniter4", "level": "Advanced", "img": "https://symbols.getvecta.com/stencil_25/10_codeigniter.8dcbcc9b8a.svg", "desc": "Lightweight PHP framework for rapid web application development following the MVC architecture." },
+    { "name": "React", "level": "Basic", "img": "https://symbols.getvecta.com/stencil_25/72_react.76a8d36b4b.svg", "desc": "JavaScript library for building user interfaces, particularly single-page applications, with reusable UI components." },
+    { "name": "Laravel", "level": "Intermediate", "img": "https://cdn.worldvectorlogo.com/logos/laravel-2.svg", "desc": "PHP framework known for its elegant syntax and developer-friendly features for web development."},
+    { "name": "Tailwind", "level": "Basic", "img": "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg", "desc": "Utility-first CSS framework providing low-level utility classes for building custom designs without writing custom CSS." }
+  ]
+  
