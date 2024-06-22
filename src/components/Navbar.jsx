@@ -110,7 +110,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           }`}
           onClick={() => handleLinkClick("education")}
         >
-          Education
+          Educations
         </ScrollLink>
       </li>
       <li>
@@ -127,6 +127,22 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           onClick={() => handleLinkClick("portfolio")}
         >
           Portfolio
+        </ScrollLink>
+      </li>
+      <li>
+        <ScrollLink
+          activeClass="active"
+          to="contact"
+          spy={true}
+          smooth={true}
+          duration={1000}
+          offset={calculateOffset()} // Offset for the fixed navbar height
+          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
+            activeLink === "contact" ? 'underline text-cyan-400' : ''
+          }`}
+          onClick={() => handleLinkClick("contact")}
+        >
+         Contact
         </ScrollLink>
       </li>
     </ul>

@@ -86,12 +86,12 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
             />
         </svg>
     </Button>
-</div>
+                </div>
 
                 </motion.div>
-                <div className="col-span-1 justify-end items-center">
+                <div className="flex flex-col items-center justify-center lg:items-end lg:justify-end">
                     <motion.div
-                        className="text-center mt-auto -mt-"
+                        className="text-center mt-auto"
                         initial={{ opacity: 0, x: 1000 }} // Initial state, hidden and moved up by 50px
                         animate={{ opacity: 1, x: 0 }} // Animate to opacity 1 and original position
                         transition={{ duration: 1 }} // Transition duration with a slight delay
@@ -99,7 +99,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                         <img
                             src={imageSource}
                             alt="My Image"
-                            className="max-w-full h-auto"
+                            className="max-w-full h-auto p-0"
                             style={{ maxHeight: '100vh', maxWidth: '100%' }}
                         />
                     </motion.div>

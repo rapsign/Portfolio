@@ -89,7 +89,7 @@ const Skill = ({ isDarkMode }) => {
                     <motion.div
                         initial={{ opacity: 0, x: 100 }}
                         animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 1.5 }}
+                        transition={{ duration: 1.5 , delay: 1.5 }}
                         className="px-6 lg:text-right sm:text-center text-center"
                     >
                         <h1 className="text-4xl font-bold text-cyan-400 mb-3">Tech Stack & Tools</h1>
