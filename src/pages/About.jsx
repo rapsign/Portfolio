@@ -69,7 +69,7 @@ const About = ({ isDarkMode }) => {
                 <div className="flex justify-center items-center">
                     <Card className={`shadow-lg p-6 ${cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}>
                       <Typography className="font-bold text-4xl text-cyan-400 mb-2"> 3+ </Typography>
-                      <Typography className="text-xl">
+                      <Typography className={`text-xl ${textColor}`}>
                       Years Of Experience
                       </Typography>
                     </Card>
@@ -77,7 +77,7 @@ const About = ({ isDarkMode }) => {
                 <div className="flex justify-center items-center">
                     <Card className={`shadow-lg p-6 ${cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}>
                       <Typography className="font-bold text-4xl  text-cyan-400 mb-2"> 5+ </Typography>
-                      <Typography className="text-lg">
+                      <Typography className={`text-lg ${textColor}`}>
                       Framework & Tech Stack Used
                       </Typography>
                     </Card>
@@ -85,7 +85,7 @@ const About = ({ isDarkMode }) => {
                 <div className="flex justify-center items-center">
                     <Card className={`shadow-lg p-6 ${cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}>
                       <Typography className="font-bold text-4xl text-cyan-400 mb-2"> 4+ </Typography>
-                      <Typography className="text-xl">
+                      <Typography className={`text-xl ${textColor}`}>
                       Successed Projects
                       </Typography>
                     </Card>
