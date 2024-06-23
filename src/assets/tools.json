@@ -1,6 +1,0 @@
-[
-    { "name": "Visual Studio Code", "level": "Basic", "img": "https://symbols.getvecta.com/stencil_27/121_visual-studio-team-services.117b5070bc.svg", "desc": "Lightweight, open-source code editor with Git integration" },
-    { "name": "Git", "level": "Basic", "img": "https://symbols.getvecta.com/stencil_28/88_visual-studio-team-services-git-repository.c595f4166d.svg", "desc": "Distributed version control system for tracking code changes."},
-    { "name": "GitHub", "level": "Basic", "img": "https://symbols.getvecta.com/stencil_65/6_github.a79e66470c.svg", "desc": "Web-based platform for hosting Git repositories." },
-    { "name": "Xampp", "level": "Basic", "img": "https://www.svgrepo.com/show/354575/xampp.svg", "desc": "Cross-platform web server solution for local development." }
-  ]

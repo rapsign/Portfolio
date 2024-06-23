@@ -1,0 +1,63 @@
+[
+    { 
+      "name": "HTML", 
+      "level": "Advanced", 
+      "img": "/img/svg/html5.svg", 
+      "desc": "HTML is the standard markup language for Web Pages" 
+    },
+    { 
+      "name": "CSS", 
+      "level": "Advanced", 
+      "img": "/img/svg/css3.svg", 
+      "desc": "CSS is language we use to style an HTML document" 
+    },
+    { 
+      "name": "JavaScript", 
+      "level": "Intermediate", 
+      "img": "/img/svg/javascript.svg", 
+      "desc": "High-level programming language for creating interactive effects within web browsers."
+    },
+    { 
+      "name": "Bootstrap", 
+      "level": "Advanced", 
+      "img": "/img/svg/bootstrap.svg", 
+      "desc": "Front-end framework for developing responsive and mobile-first websites with pre-built components and grid layouts." 
+    },
+    { 
+      "name": "MySQL", 
+      "level": "Advanced", 
+      "img": "/img/svg/mysql.svg", 
+      "desc": "Open-source relational database management system known for its reliability and performance." 
+    },
+    { 
+      "name": "PHP", 
+      "level": "Advanced", 
+      "img": "/img/svg/php.svg", 
+      "desc": "Server-side scripting language for generating dynamic web pages and interacting with databases." 
+    },
+    { 
+      "name": "Codeigniter4", 
+      "level": "Advanced", 
+      "img": "/img/svg/codeigniter.svg", 
+      "desc": "Lightweight PHP framework for rapid web application development following the MVC architecture."
+    },
+    { 
+      "name": "React", 
+      "level": "Basic", 
+      "img": "/img/svg/react.svg", 
+      "desc": "JavaScript library for building user interfaces, particularly single-page applications, with reusable UI components."
+    },
+    { 
+      "name": "Laravel", 
+      "level": "Intermediate", 
+      "img": "/img/svg/laravel.svg", 
+      "desc": "PHP framework known for its elegant syntax and developer-friendly features for web development."
+    },
+    { 
+      "name": "Tailwind", 
+      "level": "Basic", 
+      "img": "/img/svg/tailwind.svg", 
+      "desc": "Utility-first CSS framework providing low-level utility classes for building custom designs without writing custom CSS." 
+    }
+  ]
+  

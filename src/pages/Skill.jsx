@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import { motion, AnimatePresence, useInView } from "framer-motion";
 import { Card, Button } from "@material-tailwind/react";
 import { CodeBracketIcon, CommandLineIcon } from "@heroicons/react/24/solid";
-import techStackData from '../assets/techStack.json';
-import toolsData from '../assets/tools.json';
+import techStackData from '../assets/json/techStack.json';
+import toolsData from '../assets/json/tools.json';
 
 const Skill = ({ isDarkMode }) => {
     const bgColor = isDarkMode ? "bg-[#0e1b31]" : "bg-gray-100";

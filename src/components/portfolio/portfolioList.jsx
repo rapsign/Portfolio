@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import PortfolioCard from './portfolioCard';
-import portfolios from '../../assets/portfolio.json';
+import portfolios from '../../assets/json/portfolio.json';
 import { motion, useInView } from 'framer-motion';
 
 const PortfolioList = ({ isDarkMode }) => {

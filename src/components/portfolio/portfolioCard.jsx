@@ -146,10 +146,10 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
                       />
                     </motion.div>
                   ))}
-                </div>;
+                </div>
                 
                   <Typography
-                    className={`mb-2 text-justify overflow-hidden text-ellipsis ${textColor}`}
+                    className={`my-3 text-justify overflow-hidden text-ellipsis ${textColor}`}
                     style={{
                       display: "-webkit-box",
                       WebkitLineClamp: 3,
@@ -187,6 +187,9 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
               variant="outlined"
               className={`flex items-center mr-2 text-cyan-400 `}
               color="cyan"
+              onClick={() => {
+                window.open(portfolio.link, "_blank");
+              }}
             >
               Previews
               <svg
@@ -292,6 +295,9 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
     color={borderColor}
     onClick={closeDialog}
     className="flex items-center gap-3 h-full sm:h-auto sm:w-auto"
+    onClick={() => {
+      window.open(portfolio.github, "_blank");
+    }}
   >
     <svg
       xmlns="http://www.w3.org/2000/svg"
