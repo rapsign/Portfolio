@@ -23,6 +23,9 @@ module.exports = withMT({
           accent: '#f6f6f6', 
         }    
       },
+      fontFamily: {
+        futura: ['LTC Bodoni 175 W01 Regular'],
+      },
     },
   },
   plugins: [],
