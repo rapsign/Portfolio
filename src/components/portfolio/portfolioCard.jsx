@@ -32,8 +32,8 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
   };
 
   const cardBgColor = isDarkMode ? "bg-[#081c3d]" : "bg-white";
-  const textColor = isDarkMode ? "text-white" : "text-[#3c3c3c]";
-  const borderColor = isDarkMode ? "white" : "#3c3c3c";
+  const textColor = isDarkMode ? "text-white" : "text-secondary";
+  const borderColor = isDarkMode ? "white" : "black";
 
   // Efek untuk mengatur animasi saat card muncul
   useEffect(() => {
@@ -185,8 +185,8 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
             </Button>
             <Button
               variant="outlined"
-              className="flex items-center mr-2 text-cyan-400"
-              style={{ borderColor: "#00bcd4" }}
+              className={`flex items-center mr-2 text-cyan-400 `}
+              color="cyan"
             >
               Previews
               <svg
@@ -282,7 +282,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
             Description
           </Typography>
 
-          <Typography variant="body"  className={`text-justify ${textColor}`}>
+          <Typography  className={`text-justify ${textColor}`}>
             {portfolio.desc}
           </Typography>
         </DialogBody>

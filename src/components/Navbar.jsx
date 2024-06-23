@@ -171,9 +171,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
             <div className="flex items-center gap-4">
               <div className="mr-4 hidden lg:block">{navList}</div>
               <IconButton
-                color="light"
                 onClick={toggleDarkMode}
-                ripple="light"
                 className={`h-14 w-14 rounded-full flex items-center justify-center shadow-xl ${
                   isDarkMode ? 'bg-gray-700' : 'bg-white'
                 }`}

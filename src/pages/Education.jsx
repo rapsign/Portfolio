@@ -69,10 +69,10 @@ const Education = ({ isDarkMode }) => {
                                             <Typography variant="small" className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}>
                                                 Computer Engineering 
                                             </Typography>
-                                            <Typography variant="small" color="gray-700" className={`font-normal flex items-center mb-2 ${textColor}`}>
+                                            <Typography variant="small" className={`font-normal flex items-center mb-2 ${textColor}`}>
                                                 <MapIcon className="w-4 h-4 mr-2" /> Palembang, Indonesia
                                             </Typography>
-                                            <Typography variant="small" color="gray-700" className={`font-normal flex items-center ${textColor}`}>
+                                            <Typography variant="small"  className={`font-normal flex items-center ${textColor}`}>
                                                 <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2019 - 2022
                                             </Typography>
                                         </TimelineBody>
@@ -86,13 +86,13 @@ const Education = ({ isDarkMode }) => {
                                             </Typography>
                                         </TimelineHeader>
                                         <TimelineBody className="pb">
-                                            <Typography variant="medium" className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}>
+                                            <Typography className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}>
                                                 Computer and Network Engineering
                                             </Typography>
-                                            <Typography variant="small" color="gray-700" className={`font-normal flex items-center mb-2 ${textColor}`}>
+                                            <Typography  className={`font-normal flex items-center mb-2 ${textColor}`}>
                                                 <MapIcon className="w-4 h-4 mr-2 " /> Palembang, Indonesia
                                             </Typography>
-                                            <Typography variant="small" color="gray-700" className={`font-normal flex items-center ${textColor}`}>
+                                            <Typography className={`font-normal flex items-center ${textColor}`}>
                                                 <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2016 - 2019
                                             </Typography>
                                         </TimelineBody>
@@ -115,13 +115,13 @@ const Education = ({ isDarkMode }) => {
                                             </Typography>
                                         </TimelineHeader>
                                         <TimelineBody className="pb-8">
-                                        <Typography variant="medium" className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}>
+                                        <Typography  className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}>
                                         Internship
                                         </Typography>
-                                        <Typography variant="small" color="gray-700" className={`font-normal flex items-center mb-2 ${textColor}`}>
+                                        <Typography   className={`font-normal flex items-center mb-2 ${textColor}`}>
                                         <MapIcon className="w-4 h-4 mr-2 " /> Abu Dhabi, UAE
                                     </Typography>
-                                            <Typography variant="small" color="gray-700" className={`font-normal flex items-center ${textColor}`}>
+                                            <Typography className={`font-normal flex items-center ${textColor}`}>
                                                 <CalendarDaysIcon className="w-4 h-4 mr-2" /> March 2024
                                             </Typography>
                                         </TimelineBody>

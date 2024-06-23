@@ -9,10 +9,10 @@ import TypingAnimation from "../components/typingAnimation";
 const Home = ({ isDarkMode, toggleDarkMode }) => {
     const [isVisible, setIsVisible] = useState(true);
     const imageSource = isDarkMode ? myImageDark : myImageLight;
-    const textColor = isDarkMode ? 'text-white' : 'text-[#3a3a3c]';
+    const textColor = isDarkMode ? 'text-white' : 'text-secondary';
     const highlightColor = isDarkMode ? 'text-cyan-400' : 'text-cyan-400';
-    const hoverColor = isDarkMode ? 'hover:text-white' : 'hover:text-[#3a3a3c]';
-    const socialButtonColor = isDarkMode ? 'text-white border-white' : 'border-[#3a3a3c]';
+    const hoverColor = isDarkMode ? 'hover:text-white' : 'hover:text-secondary';
+    const socialButtonColor = isDarkMode ? 'text-white border-white' : 'button-secondary';
 
     
 
@@ -34,7 +34,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
 
     return (
         <>
-        <section id="home" className={`min-h-screen flex flex-col ${isDarkMode ? 'bg-[#0e1b31]' : 'bg-gray-100'} relative`}>
+        <section id="home" className={`min-h-screen flex flex-col relative`}>
             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 w-full lg:mt-20">
                 <motion.div
                     className="col-span-1 flex items-center justify-center lg:items-center lg:justify-start p-6"
@@ -92,7 +92,7 @@ const Home = ({ isDarkMode, toggleDarkMode }) => {
                 <div className="flex flex-col items-center justify-center lg:items-end lg:justify-end">
                     <motion.div
                         className="text-center mt-auto"
-                        initial={{ opacity: 0, x: 1000 }} // Initial state, hidden and moved up by 50px
+                        initial={{ opacity: 0, x: 200 }} // Initial state, hidden and moved up by 50px
                         animate={{ opacity: 1, x: 0 }} // Animate to opacity 1 and original position
                         transition={{ duration: 1 }} // Transition duration with a slight delay
                     >

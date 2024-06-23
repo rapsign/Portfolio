@@ -4,7 +4,7 @@ import portfolios from '../../assets/portfolio.json';
 import { motion, useInView } from 'framer-motion';
 
 const PortfolioList = ({ isDarkMode }) => {
-  const borderColor = isDarkMode ? 'border-gray-300' : 'border-[#3a3a3c]';
+  const borderColor = isDarkMode ? 'border-gray-300' : 'border-secondary';
   // useInView hook setup
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -30,6 +30,7 @@ const PortfolioList = ({ isDarkMode }) => {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full sm:w-full lg:w-full px-6">
         {portfolios.map((portfolio, index) => (
             <PortfolioCard
+            key={portfolio.id}
               index={index}
               portfolio={portfolio}
               isDarkMode={isDarkMode}
