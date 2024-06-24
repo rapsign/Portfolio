@@ -62,7 +62,11 @@ const About = ({ isDarkMode }) => {
                    a web developer based in <span className="text-cyan-400">Indonesia</span>
                 </Typography>
                     <Typography className={`${cardTextColor} text-xl mb-8 text-justify`}>
-                        I'm a passionate web developer with a love for creating interactive and dynamic web applications. With a strong foundation in JavaScript, React, and CSS, I strive to build user-friendly and visually appealing websites.
+                    Passionate computer technology enthusiast who specializes in web development and wants to contribute
+                    as a programmer. Proficient in front-end technologies such as HTML, CSS, JavaScript, and React,
+                    bootstrap and back-end development using Codeignter4. Proactive and dedicated to continuous learning,
+                    I am excited about opportunities to enhance my skills and contribute to innovative projects in a
+                    programming role.
                     </Typography>
                     <hr className={`border-t-2 px-6 pb-4 ${borderColor} w-full `} />
                     <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 w-full">
