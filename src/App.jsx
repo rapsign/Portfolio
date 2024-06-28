@@ -32,14 +32,14 @@ const App = () => {
     return (
         <>
             <StickyNavbar isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-            <div className="container mx-auto">
-                <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-                <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
-                <Skill isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-                <Education isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-                <Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-                <Contact isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
-            </div>
+                <div className="container mx-auto">
+                    <Home isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                    <About isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode}/>
+                    <Skill isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                    <Education isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                    <Portfolio isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                    <Contact isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
+                </div>
             <BackToTopButton/>
             <FooterWithSitemap/>
         </>

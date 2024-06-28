@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowUpIcon } from '@heroicons/react/24/solid';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
+import { ArrowUpIcon } from "@heroicons/react/24/solid";
 
 const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -16,18 +16,18 @@ const BackToTopButton = () => {
     };
 
     // Menambahkan event listener untuk mengatur keadaan isVisible saat terjadi scroll
-    window.addEventListener('scroll', toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility);
 
     // Membersihkan event listener setelah komponen dibongkar
     return () => {
-      window.removeEventListener('scroll', toggleVisibility);
+      window.removeEventListener("scroll", toggleVisibility);
     };
   }, []);
 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -43,17 +43,17 @@ const BackToTopButton = () => {
           whileTap={{ scale: 0.9 }}
           onClick={scrollToTop}
           style={{
-            position: 'fixed',
-            bottom: '20px',
-            right: '20px',
-            padding: '10px',
-            borderRadius: '5px',
-            backgroundColor: '#26c6da',
-            color: '#fff',
-            border: 'none',
-            outline: 'none',
-            cursor: 'pointer',
-            zIndex: '1000'
+            position: "fixed",
+            bottom: "20px",
+            right: "20px",
+            padding: "10px",
+            borderRadius: "5px",
+            backgroundColor: "#26c6da",
+            color: "#fff",
+            border: "none",
+            outline: "none",
+            cursor: "pointer",
+            zIndex: "1000",
           }}
         >
           <ArrowUpIcon className="h-6 w-6" />

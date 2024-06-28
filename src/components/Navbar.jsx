@@ -17,7 +17,10 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
       setScrollPosition(window.scrollY);
 
       const sections = document.querySelectorAll("section");
-      const scrollPos = window.scrollY + (navbarRef.current ? navbarRef.current.offsetHeight : 0) + 10;
+      const scrollPos =
+        window.scrollY +
+        (navbarRef.current ? navbarRef.current.offsetHeight : 0) +
+        10;
 
       sections.forEach((section) => {
         if (
@@ -58,7 +61,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           duration={1000}
           offset={calculateOffset()} // Offset for the fixed navbar height
           className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400 ${
-            activeLink === "home" ? 'underline text-cyan-400' : ''
+            activeLink === "home" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("home")}
         >
@@ -74,7 +77,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           duration={1000}
           offset={calculateOffset()} // Offset for the fixed navbar height
           className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
-            activeLink === "about" ? 'underline text-cyan-400' : ''
+            activeLink === "about" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("about")}
         >
@@ -90,7 +93,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           duration={1000}
           offset={calculateOffset()} // Offset for the fixed navbar height
           className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
-            activeLink === "skill" ? 'underline text-cyan-400' : ''
+            activeLink === "skill" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("skill")}
         >
@@ -106,7 +109,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           duration={1000}
           offset={calculateOffset()} // Offset for the fixed navbar height
           className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
-            activeLink === "education" ? 'underline text-cyan-400' : ''
+            activeLink === "education" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("education")}
         >
@@ -122,7 +125,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           duration={1000}
           offset={calculateOffset()} // Offset for the fixed navbar height
           className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
-            activeLink === "portfolio" ? 'underline text-cyan-400' : ''
+            activeLink === "portfolio" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("portfolio")}
         >
@@ -138,11 +141,11 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           duration={1000}
           offset={calculateOffset()} // Offset for the fixed navbar height
           className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
-            activeLink === "contact" ? 'underline text-cyan-400' : ''
+            activeLink === "contact" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("contact")}
         >
-         Contact
+          Contact
         </ScrollLink>
       </li>
     </ul>
@@ -153,27 +156,29 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
       <Navbar
         ref={navbarRef}
         className={`sticky top-0 z-10 h-max max-w-full rounded-none px-4 py-2 lg:px-8 lg:py-4 shadow-none
-            ${scrollPosition > 0 ? 'bg-opacity-50 backdrop-blur shadow-xl' : ''} 
-            ${isDarkMode ? 'bg-[#0e1b31] text-white' : 'bg-gray-100 text-[#3c3c3c]'} border-none `}
+            ${
+              scrollPosition > 0 ? "bg-opacity-50 backdrop-blur shadow-xl" : ""
+            } 
+            ${
+              isDarkMode
+                ? "bg-[#0e1b31] text-white"
+                : "bg-gray-100 text-[#3c3c3c]"
+            } border-none `}
       >
         <div className="container mx-auto">
           <div className="flex items-center justify-between">
-          <div className="flex items-center">
-          <a href="/">
-            <img
-              src={imageSource}
-              alt="Logo"
-              className="h-20 w-20 ml-5"
-            />
-          </a>
-        </div>
-        
+            <div className="flex items-center">
+              <a href="/">
+                <img src={imageSource} alt="Logo" className="h-20 w-20 ml-5" />
+              </a>
+            </div>
+
             <div className="flex items-center gap-4">
               <div className="mr-4 hidden lg:block">{navList}</div>
               <IconButton
                 onClick={toggleDarkMode}
                 className={`h-14 w-14 rounded-full flex items-center justify-center shadow-xl ${
-                  isDarkMode ? 'bg-gray-700' : 'bg-white'
+                  isDarkMode ? "bg-gray-700" : "bg-white"
                 }`}
               >
                 {isDarkMode ? (
@@ -199,7 +204,11 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                     stroke={isDarkMode ? "white" : "currentColor"}
                     strokeWidth={2}
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
                   </svg>
                 ) : (
                   <svg
@@ -210,7 +219,11 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
                     strokeWidth={2}
                     viewBox="0 0 24 24"
                   >
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M4 6h16M4 12h16M4 18h16"
+                    />
                   </svg>
                 )}
               </IconButton>
