@@ -124,12 +124,14 @@ const Education = ({ isDarkMode }) => {
                         Computer and Network Engineering
                       </Typography>
                       <Typography
+                        variant="small"
                         className={`font-normal flex items-center mb-2 ${textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2 " /> Palembang,
                         Indonesia
                       </Typography>
                       <Typography
+                        variant="small"
                         className={`font-normal flex items-center ${textColor}`}
                       >
                         <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2016 -
@@ -164,11 +166,13 @@ const Education = ({ isDarkMode }) => {
                         Internship
                       </Typography>
                       <Typography
+                        variant="small"
                         className={`font-normal flex items-center mb-2 ${textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2 " /> Abu Dhabi, UAE
                       </Typography>
                       <Typography
+                        variant="small"
                         className={`font-normal flex items-center ${textColor}`}
                       >
                         <CalendarDaysIcon className="w-4 h-4 mr-2" /> March 2024

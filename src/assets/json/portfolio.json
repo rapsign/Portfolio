@@ -58,5 +58,25 @@
         "name": "MySQL"
       }
     ]
+  },
+  {
+    "id": "3",
+    "title": "Linktree Website",
+    "img": "/img/portfolio/linktree.PNG",
+    "desc": "The linktree website that I created contains my social media links such as Instagram, TikTok and Saweria, which I created with HTML and CSS.",
+    "github": "https://github.com/rapsign/rapsign.github.io",
+    "link": "https://rapsign.github.io/",
+    "techStack": [
+      {
+        "id": "HTML",
+        "svg": "/img/svg/html5.svg",
+        "name": "HTML"
+      },
+      {
+        "id": "CSS",
+        "svg": "/img/svg/css3.svg",
+        "name": "CSS"
+      }
+    ]
   }
 ]
