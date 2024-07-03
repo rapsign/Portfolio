@@ -1,62 +1,62 @@
 [
-    {
-        "id" : "1",
-        "title": "My Portfolio Website",
-        "img": "/img/portfolio/portfolio-website.PNG",
-        "desc": "My portfolio website is built using Vite, Tailwind CSS, and Framer Motion technologies. It consists of 6 pages, including home, portfolio, and about me sections. The website is designed to showcase my work with modern design and smooth animations. Its goal is to provide an intuitive and engaging user experience across various devices.",
-        "github": "https://github.com/rapsign/portfolio",
-        "link": "https://portfolio-rinaldi-a-prayuda.vercel.app/",
-        "techStack": [
-            {
-                "id": "vite",
-                "svg": "/img/svg/vitejs.svg",
-                "name": "ViteJS"
-            },
-            {
-                "id": "tailwind",
-                "svg": "/img/svg/tailwind.svg",
-                "name": "Tailwind"
-            },
-            {
-                "id": "react",
-                "svg": "/img/svg/react.svg",
-                "name": "React"
-            },
-            {
-                "id": "framer-motion",
-                "svg": "/img/svg/framer-motion.svg",
-                "name": "Framer Motion"
-            }
-        ]
-    },
-    {
-        "id" : "2",
-        "title": "Cloud Storage",
-        "img": "/img/portfolio/Aplikasi Cloud Storage.PNG",
-        "desc": "an application similar to google drive built with CodeIgniter4, MySQL, and JavaScript. which can store your files",
-        "github": "https://github.com/rapsign/Drive-Cloud",
-        "link": "https://github.com/rapsign/Drive-Cloud",
-        "techStack": [
-            {
-                "id": "codeigniter4",
-                "svg": "/img/svg/codeigniter.svg",
-                "name": "CodeIgniter4"
-            },
-            {
-                "id": "bootstrap",
-                "svg": "/img/svg/bootstrap.svg",
-                "name": "bootstrap"
-            },
-            {
-                "id": "javascript",
-                "svg": "https://symbols.getvecta.com/stencil_25/41_javascript.0ca26ec4ab.svg",
-                "name": "JavaScript"
-            },
-            {
-                "id": "mysql",
-                "svg": "/img/svg/mysql.svg",
-                "name": "MySQL"
-            }
-        ]
-    }
+  {
+    "id": "1",
+    "title": "My Portfolio Website",
+    "img": "/img/portfolio/portfolio-website.PNG",
+    "desc": "My portfolio website is built using Vite, Tailwind CSS, and Framer Motion technologies. It consists of 6 pages, including home, portfolio, and about me sections. The website is designed to showcase my work with modern design and smooth animations. Its goal is to provide an intuitive and engaging user experience across various devices.",
+    "github": "https://github.com/rapsign/portfolio",
+    "link": "/",
+    "techStack": [
+      {
+        "id": "vite",
+        "svg": "/img/svg/vitejs.svg",
+        "name": "ViteJS"
+      },
+      {
+        "id": "tailwind",
+        "svg": "/img/svg/tailwind.svg",
+        "name": "Tailwind"
+      },
+      {
+        "id": "react",
+        "svg": "/img/svg/react.svg",
+        "name": "React"
+      },
+      {
+        "id": "framer-motion",
+        "svg": "/img/svg/framer-motion.svg",
+        "name": "Framer Motion"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Cloud Storage",
+    "img": "/img/portfolio/Aplikasi Cloud Storage.PNG",
+    "desc": "an application similar to google drive built with CodeIgniter4, MySQL, and JavaScript. which can store your files",
+    "github": "https://github.com/rapsign/Drive-Cloud",
+    "link": "https://github.com/rapsign/Drive-Cloud",
+    "techStack": [
+      {
+        "id": "codeigniter4",
+        "svg": "/img/svg/codeigniter.svg",
+        "name": "CodeIgniter4"
+      },
+      {
+        "id": "bootstrap",
+        "svg": "/img/svg/bootstrap.svg",
+        "name": "bootstrap"
+      },
+      {
+        "id": "javascript",
+        "svg": "https://symbols.getvecta.com/stencil_25/41_javascript.0ca26ec4ab.svg",
+        "name": "JavaScript"
+      },
+      {
+        "id": "mysql",
+        "svg": "/img/svg/mysql.svg",
+        "name": "MySQL"
+      }
+    ]
+  }
 ]
