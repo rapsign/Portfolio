@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowUpIcon } from "@heroicons/react/24/solid";
 
@@ -50,8 +50,8 @@ const BackToTopButton = () => {
             borderRadius: "5px",
             backgroundColor: "#26c6da",
             color: "#fff",
-            border: "none",
-            outline: "none",
+            border: "solid 1px",
+            outline: "white",
             cursor: "pointer",
             zIndex: "1000",
           }}
