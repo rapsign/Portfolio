@@ -113,40 +113,5 @@
         "name": "CSS"
       }
     ]
-  },
-  {
-    "id": "4",
-    "title": "Wonderful Indonesia",
-    "img": "/img/portfolio/Tourism-Web.png",
-    "desc": "Wonderful Indonesia is a web-based application that provides various information and services related to tourist destinations, including reservations, payment confirmations, and booking checks. This application is built using the native PHP programming language.",
-    "github": "https://github.com/rapsign/Tourism-Web",
-    "link": "",
-    "techStack": [
-      {
-        "id": "php",
-        "svg": "/img/svg/php.svg",
-        "name": "PHP"
-      },
-      {
-        "id": "bootstrap",
-        "svg": "/img/svg/Bootstrap.svg",
-        "name": "Bootstrap"
-      },
-      {
-        "id": "javascript",
-        "svg": "/img/svg/javascript.svg",
-        "name": "Javascript"
-      },
-      {
-        "id": "HTML",
-        "svg": "/img/svg/html5.svg",
-        "name": "HTML"
-      },
-      {
-        "id": "CSS",
-        "svg": "/img/svg/css3.svg",
-        "name": "CSS"
-      }
-    ]
   }
 ]
