@@ -113,5 +113,30 @@
         "name": "CSS"
       }
     ]
+  },
+  {
+    "id": "5",
+    "title": "twiceflix",
+    "img": "/img/portfolio/twiceflix.png",
+    "desc": "TWICEFLIX is a React-based application designed to showcase YouTube content from the K-pop idol group TWICE. The app features a Netflix-like interface, allowing users to browse TWICE's video playlists with a responsive and engaging user experience.",
+    "github": "https://github.com/rapsign/Twiceflix",
+    "link": "https://twiceflix-f10d7.web.app/",
+    "techStack": [
+      {
+        "id": "vite",
+        "svg": "/img/svg/vitejs.svg",
+        "name": "Vite"
+      },
+      {
+        "id": "firebase",
+        "svg": "/img/svg/firebase.svg",
+        "name": "Firebase"
+      },
+      {
+        "id": "chakraUI",
+        "svg": "/img/svg/chakra-ui.svg",
+        "name": "Chakra UI"
+      }
+    ]
   }
 ]
