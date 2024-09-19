@@ -35,7 +35,7 @@ const Home = ({ isDarkMode }) => {
 
   const handleDownloadCV = () => {
     window.open(
-      "https://drive.google.com/file/d/1yn1D9U2sG15L8ee1I38CUdWEZjE09-m4/view?usp=sharing",
+      "https://drive.google.com/file/d/1iZ0sOfwZ8ZWm1Sxk3Ay-3wAFIZo0Xxb-/view?usp=drive_link",
       "_blank",
       "noopener,noreferrer"
     );
