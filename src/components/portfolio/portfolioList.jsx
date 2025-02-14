@@ -5,7 +5,6 @@ import { motion, useInView } from "framer-motion";
 
 const PortfolioList = ({ isDarkMode }) => {
   const borderColor = isDarkMode ? "border-gray-300" : "border-secondary";
-  // useInView hook setup
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -20,9 +19,9 @@ const PortfolioList = ({ isDarkMode }) => {
       </div>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and move up from y = 50
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }} // Animate opacity and move up when in view
-        transition={{ duration: 0.5 }} // Animation duration
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }}
+        transition={{ duration: 0.5 }}
         className="w-full p-6 px-12 text-center lg:text-left sm:text-center"
       >
         <h1 className="text-4xl font-bold mb-3 text-cyan-400">

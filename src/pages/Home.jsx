@@ -11,7 +11,6 @@ const Home = ({ isDarkMode }) => {
   const linkedinIcon = "../img/svg/linkedin.svg";
   const githubIcon = "../img/svg/github.svg";
   const myImageDark = "/img/rap-dark.png";
-  const pdf = "../pdf/CV_Rinaldi_A_Prayuda.pdf";
   const [isVisible, setIsVisible] = useState(true);
   const imageSource = isDarkMode ? myImageDark : myImageLight;
   const textColor = isDarkMode ? "text-white" : "text-secondary";

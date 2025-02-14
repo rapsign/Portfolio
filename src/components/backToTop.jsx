@@ -6,7 +6,6 @@ const BackToTopButton = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Fungsi untuk menentukan apakah tombol harus ditampilkan berdasarkan posisi scroll
     const toggleVisibility = () => {
       if (window.scrollY > 100) {
         setIsVisible(true);
@@ -14,11 +13,7 @@ const BackToTopButton = () => {
         setIsVisible(false);
       }
     };
-
-    // Menambahkan event listener untuk mengatur keadaan isVisible saat terjadi scroll
     window.addEventListener("scroll", toggleVisibility);
-
-    // Membersihkan event listener setelah komponen dibongkar
     return () => {
       window.removeEventListener("scroll", toggleVisibility);
     };

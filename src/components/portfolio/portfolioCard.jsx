@@ -19,7 +19,7 @@ import {
 const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
   const [isHovered, setIsHovered] = useState(false);
   const [isDialogOpen, setIsDialogOpen] = useState(false);
-  const [isVisible, setIsVisible] = useState(false); // State untuk mengontrol visibilitas animasi
+  const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const delay = index * 0.2;
@@ -34,10 +34,8 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
   const cardBgColor = isDarkMode ? "bg-[#081c3d]" : "bg-white";
   const textColor = isDarkMode ? "text-white" : "text-secondary";
   const borderColor = isDarkMode ? "white" : "black";
-
-  // Efek untuk mengatur animasi saat card muncul
   useEffect(() => {
-    setIsVisible(true); // Setelah render pertama, atur isVisible menjadi true untuk memulai animasi
+    setIsVisible(true);
   }, []);
 
   return (
@@ -93,9 +91,9 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
           <AnimatePresence>
             {isVisible && (
               <motion.div
-                initial={{ opacity: 0, y: 20 }} // Efek awal elemen
-                animate={{ opacity: 1, y: 0 }} // Animasi saat elemen muncul
-                transition={{ duration: 0.5 }} // Durasi animasi
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
               >
                 <CardBody className={`${cardBgColor}`}>
                   <Typography variant="h4" className={`mb-2 ${textColor}`}>

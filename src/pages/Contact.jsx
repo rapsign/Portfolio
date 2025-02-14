@@ -1,5 +1,4 @@
-import { useRef, useState } from "react";
-import { useInView, motion } from "framer-motion";
+import { motion } from "framer-motion";
 import {
   Card,
   CardBody,
@@ -7,64 +6,26 @@ import {
   Input,
   Textarea,
 } from "@material-tailwind/react";
-import emailjs from "emailjs-com";
+import { useForm } from "../hooks/useForm";
+import { useInViewAnimation } from "../hooks/useInViewAnimation";
+import { getThemeStyles } from "../utils/themeStyles";
 
 const Contact = ({ isDarkMode }) => {
-  const borderColor = isDarkMode ? "border-gray-300" : "border-[#3a3a3c]";
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
-  const cardBgColor = isDarkMode ? "bg-[#081c3d]" : "bg-white";
-  const textColor = isDarkMode ? "text-white" : "text-[#3a3a3c]";
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Destructure data from formData
-    const { firstName, lastName, email, subject, message } = formData;
-    // Prepare email template parameters
-    const templateParams = {
-      from_name: `${firstName} ${lastName}`,
-      from_email: email,
-      subject: subject,
-      message: message,
-    };
-    emailjs
-      .send(
-        "service_kwfmywq",
-        "template_npmngq3",
-        templateParams,
-        "JEpzkXhbxoP-57CAT"
-      )
-      .then((response) => {
-        console.log("Email successfully sent!", response.status, response.text);
-        // Optionally clear the form here
-        setFormData({
-          firstName: "",
-          lastName: "",
-          email: "",
-          subject: "",
-          message: "",
-        });
-      })
-      .catch((error) => {
-        console.error("Email send failed:", error);
-      });
-  };
+  const themeStyles = getThemeStyles(isDarkMode);
+  const { ref, isInView } = useInViewAnimation({ once: true });
+  const { formData, handleChange, handleSubmit, loading, error, success } =
+    useForm(
+      {
+        firstName: "",
+        lastName: "",
+        email: "",
+        subject: "",
+        message: "",
+      },
+      import.meta.env.VITE_EMAILJS_SERVICE_ID,
+      import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+      import.meta.env.VITE_EMAILJS_USER_ID
+    );
 
   return (
     <section
@@ -73,226 +34,57 @@ const Contact = ({ isDarkMode }) => {
     >
       <div className="flex flex-col items-center justify-center ">
         <h1 className="text-5xl mt-20 font-bold my-5">Contact</h1>
-        <hr className={`border-t-8 ${borderColor} w-24 mb-5`} />
+        <hr className={`border-t-8 ${themeStyles.borderColor} w-24 mb-5`} />
       </div>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and move up from y = 50
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }} // Animate opacity and move up when in view
-        transition={{ duration: 0.5 }} // Animation duration
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }}
+        transition={{ duration: 0.5 }}
         className="w-full p-6 px-12 text-center lg:text-left sm:text-center"
       >
         <h1 className="text-4xl font-bold mb-3 text-cyan-400">
           Feel Free To Contact Me
         </h1>
         <p className="text-lg">
-          I'am always open to discussing product design, collaborating work or
-          partnerships. Just contact me with this media below
+          I'm always open to discussing product design, collaborating work or
+          partnerships. Just contact me with the media below.
         </p>
       </motion.div>
+
+      {/* Cards Section */}
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 w-full pb-4 px-6">
-        <motion.a
-          ref={ref}
-          initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and move up from y = 50
-          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }} // Animate opacity and move up when in view
-          transition={{ duration: 0.5, delay: 0.3 }}
-          href="https://wa.me/6289632931696"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Card
-            className={`mt-6 group w-full  border-b-4 border-cyan-400 hover:shadow-xl ${cardBgColor}`}
-          >
-            <CardBody>
-              <div className="grid grid-cols-3">
-                <motion.div
-                  className="col-span-1 flex flex-col items-center justify-center mr-5"
-                  whileHover={{ y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="80"
-                    height="80"
-                    viewBox="0 0 48 48"
-                  >
-                    <path
-                      fill="#fff"
-                      d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"
-                    ></path>
-                    <path
-                      fill="#fff"
-                      d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"
-                    ></path>
-                    <path
-                      fill="#cfd8dc"
-                      d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"
-                    ></path>
-                    <path
-                      fill="#40c351"
-                      d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"
-                    ></path>
-                    <path
-                      fill="#fff"
-                      fillRule="evenodd"
-                      d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
-                      clipRule="evenodd"
-                    ></path>
-                  </svg>
-                </motion.div>
-                <div className="col-span-2 flex flex-col items-start justify-start">
-                  <Typography className={`font-bold text-xl ${textColor}`}>
-                    WhatsApp
-                  </Typography>
-                  <Typography className={`mb-2 ${textColor}`}>
-                    +62 89632931696
-                  </Typography>
-                  <Typography className="flex items-start gap-2 font-bold text-cyan-400">
-                    Send Me A Message
-                  </Typography>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
-        </motion.a>
-        <motion.a
-          ref={ref}
-          initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and move up from y = 50
-          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }} // Animate opacity and move up when in view
-          transition={{ duration: 0.5, delay: 0.5 }}
-          href="https://mail.google.com/mail/u/0/?fs=1&to=renaldiprayuda11@gmail.com&su=SUBJECT&body=Your+Messages&tf=cm"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full"
-        >
-          <Card
-            className={`mt-6 group w-full border-b-4 border-cyan-400 hover:shadow-xl ${cardBgColor}`}
-          >
-            <CardBody>
-              <div className="grid grid-cols-3">
-                <motion.div
-                  className="col-span-1 flex flex-col items-center justify-center mr-5"
-                  whileHover={{ y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="80"
-                    height="80"
-                    viewBox="0 0 48 48"
-                  >
-                    <path
-                      fill="#4caf50"
-                      d="M45,16.2l-5,2.75l-5,4.75L35,40h7c1.657,0,3-1.343,3-3V16.2z"
-                    ></path>
-                    <path
-                      fill="#1e88e5"
-                      d="M3,16.2l3.614,1.71L13,23.7V40H6c-1.657,0-3-1.343-3-3V16.2z"
-                    ></path>
-                    <polygon
-                      fill="#e53935"
-                      points="35,11.2 24,19.45 13,11.2 12,17 13,23.7 24,31.95 35,23.7 36,17"
-                    ></polygon>
-                    <path
-                      fill="#c62828"
-                      d="M3,12.298V16.2l10,7.5V11.2L9.876,8.859C9.132,8.301,8.228,8,7.298,8h0C4.924,8,3,9.924,3,12.298z"
-                    ></path>
-                    <path
-                      fill="#fbc02d"
-                      d="M45,12.298V16.2l-10,7.5V11.2l3.124-2.341C38.868,8.301,39.772,8,40.702,8h0 C43.076,8,45,9.924,45,12.298z"
-                    ></path>
-                  </svg>
-                </motion.div>
-                <div className="col-span-2 flex flex-col items-start justify-start">
-                  <Typography className={`font-bold text-xl ${textColor}`}>
-                    Gmail
-                  </Typography>
-                  <Typography className={`mb-2 ${textColor}`}>
-                    renaldiprayuda11@gmail.com
-                  </Typography>
-                  <Typography className="flex items-start gap-2 font-bold text-cyan-400">
-                    Send Me A Message
-                  </Typography>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
-        </motion.a>
-        <motion.a
-          ref={ref}
-          initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and move up from y = 50
-          animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }} // Animate opacity and move up when in view
-          transition={{ duration: 0.5, delay: 0.7 }}
-          href="https://t.me/+6289632931696"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full"
-        >
-          <Card
-            className={`mt-6 group w-full border-b-4 border-cyan-400 hover:shadow-xl ${cardBgColor}`}
-          >
-            <CardBody>
-              <div className="grid grid-cols-3">
-                <motion.div
-                  className="col-span-1 flex flex-col items-center justify-center mr-5"
-                  whileHover={{ y: -10 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="80"
-                    height="80"
-                    viewBox="0 0 48 48"
-                  >
-                    <path
-                      fill="#29b6f6"
-                      d="M24,4C13,4,4,13,4,24s9,20,20,20s20-9,20-20S35,4,24,4z"
-                    ></path>
-                    <path
-                      fill="#fff"
-                      d="M34,15l-3.7,19.1c0,0-0.2,0.9-1.2,0.9c-0.6,0-0.9-0.3-0.9-0.3L20,28l-4-2l-5.1-1.4c0,0-0.9-0.3-0.9-1	c0-0.6,0.9-0.9,0.9-0.9l21.3-8.5c0,0,0.7-0.2,1.1-0.2c0.3,0,0.6,0.1,0.6,0.5C34,14.8,34,15,34,15z"
-                    ></path>
-                    <path
-                      fill="#b0bec5"
-                      d="M23,30.5l-3.4,3.4c0,0-0.1,0.1-0.3,0.1c-0.1,0-0.1,0-0.2,0l1-6L23,30.5z"
-                    ></path>
-                    <path
-                      fill="#cfd8dc"
-                      d="M29.9,18.2c-0.2-0.2-0.5-0.3-0.7-0.1L16,26c0,0,2.1,5.9,2.4,6.9c0.3,1,0.6,1,0.6,1l1-6l9.8-9.1	C30,18.7,30.1,18.4,29.9,18.2z"
-                    ></path>
-                  </svg>
-                </motion.div>
-                <div className="col-span-2 flex flex-col items-start justify-start">
-                  <Typography className={`font-bold text-xl ${textColor}`}>
-                    Telegram
-                  </Typography>
-                  <Typography className={`mb-2 ${textColor}`}>
-                    +62 89632931696
-                  </Typography>
-                  <Typography className="flex items-start gap-2 font-bold text-cyan-400">
-                    Send Me A Message
-                  </Typography>
-                </div>
-              </div>
-            </CardBody>
-          </Card>
-        </motion.a>
+        <ContactCard
+          link="https://wa.me/6285121101696"
+          platform="WhatsApp"
+          contactInfo="+62 85121101696"
+          iconPath="img/svg/whatsapp.svg"
+          isDarkMode={isDarkMode}
+        />
+        <ContactCard
+          link="https://mail.google.com/mail/u/0/?fs=1&to=renaldiprayuda11@gmail.com&su=SUBJECT&body=Your+Messages&tf=cm"
+          platform="Gmail"
+          contactInfo="renaldiprayuda11@gmail.com"
+          iconPath="img/svg/gmail.svg"
+          isDarkMode={isDarkMode}
+        />
+        <ContactCard
+          link="https://t.me/+6289632931696"
+          platform="Telegram"
+          contactInfo="+62 89632931696"
+          iconPath="img/svg/telegram.svg"
+          isDarkMode={isDarkMode}
+        />
       </div>
       <div className="col-span-1 flex items-center justify-center pb-4 px-6 w-full">
-        <hr className={`border-t-1 ${borderColor} w-full`} />
-        <span className={`mx-4 font-bold ${textColor}`}>Or</span>
-        <hr className={`border-t-1 ${borderColor} w-full`} />
+        <hr className={`border-t ${themeStyles.borderColor} w-full`} />
+        <span className={`mx-4 font-bold ${themeStyles.textColor}`}>Or</span>
+        <hr className={`border-t ${themeStyles.borderColor} w-full`} />
       </div>
       <motion.div
         ref={ref}
-        initial={{ opacity: 0, y: 200 }} // Start with opacity 0 and move up from y = 50
-        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }} // Animate opacity and move up when in view
+        initial={{ opacity: 0, y: 200 }}
+        animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         className="w-full px-6 pb-4"
       >
@@ -404,6 +196,50 @@ const Contact = ({ isDarkMode }) => {
         </form>
       </motion.div>
     </section>
+  );
+};
+
+const ContactCard = ({ link, platform, contactInfo, iconPath, isDarkMode }) => {
+  const { ref, isInView } = useInViewAnimation({ once: true });
+  const themeStyles = getThemeStyles(isDarkMode);
+
+  return (
+    <motion.a
+      ref={ref}
+      initial={{ opacity: 0, y: 200 }}
+      animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }}
+      transition={{ duration: 0.5, delay: 0.3 }}
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
+      <Card
+        className={`mt-6 group w-full border-b-4 ${themeStyles.cardBgColor}  border-cyan-400 hover:shadow-xl`}
+      >
+        <CardBody className="flex flex-row items-center">
+          <motion.div
+            className="flex flex-col items-center justify-center mr-5"
+            whileHover={{ y: -10 }}
+            transition={{ duration: 0.2 }}
+          >
+            <img src={iconPath} alt={platform} width="80" height="80" />
+          </motion.div>
+          <div className="flex flex-col items-start justify-start">
+            <Typography
+              className={`font-bold ${themeStyles.cardTextColor} text-xl`}
+            >
+              {platform}
+            </Typography>
+            <Typography className={`mb-2 ${themeStyles.cardTextColor}`}>
+              {contactInfo}
+            </Typography>
+            <Typography className="font-bold text-cyan-400">
+              Send Me A Message
+            </Typography>
+          </div>
+        </CardBody>
+      </Card>
+    </motion.a>
   );
 };
 

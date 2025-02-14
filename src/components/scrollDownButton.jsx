@@ -3,7 +3,7 @@ import { Button } from "@material-tailwind/react";
 import { Link } from "react-scroll";
 
 const scrollDownButton = ({ isVisible, hoverColor }) => {
-  const buttonOpacity = isVisible ? "opacity-100" : "opacity-0"; // Adjust opacity based on isVisible prop
+  const buttonOpacity = isVisible ? "opacity-100" : "opacity-0";
 
   return (
     <div

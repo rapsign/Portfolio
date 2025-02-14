@@ -49,13 +49,13 @@
   },
   {
     "name": "Laravel",
-    "level": "Intermediate",
+    "level": "Advanced",
     "img": "/img/svg/laravel.svg",
     "desc": "PHP framework known for its elegant syntax and developer-friendly features for web development."
   },
   {
     "name": "Tailwind",
-    "level": "Basic",
+    "level": "Intermediate",
     "img": "/img/svg/tailwind.svg",
     "desc": "Utility-first CSS framework providing low-level utility classes for building custom designs without writing custom CSS."
   }

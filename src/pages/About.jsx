@@ -2,14 +2,10 @@ import { motion, useInView } from "framer-motion";
 import { Card, Typography } from "@material-tailwind/react";
 import image from "../../public/img/me-ng.png";
 import { useRef, useState } from "react";
+import { getThemeStyles } from "../utils/themeStyles";
 
 const About = ({ isDarkMode }) => {
-  const bgColor = isDarkMode ? "bg-[#0e1b31]" : "bg-gray-100";
-  const textColor = isDarkMode ? "text-gray-100" : "text-primary";
-  const borderColor = isDarkMode ? "border-gray-300" : "border-primary";
-  const cardBgColor = isDarkMode ? "bg-[#081c3d]" : "bg-white";
-  const cardTextColor = isDarkMode ? "text-white" : "text-primary";
-  const titleColor = isDarkMode ? "text-white" : "text-primary";
+  const themeStyles = getThemeStyles(isDarkMode);
   const animateRef = useRef(null);
   const animateInView = useInView(animateRef, { once: true });
   const [isHovered, setIsHovered] = useState(false);
@@ -17,13 +13,15 @@ const About = ({ isDarkMode }) => {
   return (
     <section
       id="about"
-      className={`flex flex-col items-center justify-center p-6 ${bgColor} ${textColor}`}
+      className={`flex flex-col items-center justify-center p-6 ${themeStyles.bgColor} ${themeStyles.textColor}`}
     >
-      <h1 className={`text-5xl mt-20 font-bold mb-5 ${titleColor}`}>
+      <h1 className={`text-5xl mt-20 font-bold mb-5 ${themeStyles.titleColor}`}>
         About Me
       </h1>
-      <hr className={`border-t-8 ${borderColor} w-24 mb-5`} />
+      <hr className={`border-t-8 ${themeStyles.borderColor} w-24 mb-5`} />
+
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
+        {/* Left Section */}
         <div className="col-span-1 flex justify-center items-center p-6">
           <motion.div
             ref={animateRef}
@@ -34,14 +32,10 @@ const About = ({ isDarkMode }) => {
             }}
             transition={{ duration: 1.5 }}
             className="p-6 flex justify-center items-center"
-            style={{ textAlign: "center" }}
           >
             <Card
-              className="shadow-lg p-0 bg-cyan-400 rounded-lg"
-              style={{
-                maxWidth: "90%",
-                maxHeight: "90%",
-              }}
+              className={`shadow-lg p-0 bg-cyan-400 rounded-lg`}
+              style={{ maxWidth: "90%", maxHeight: "90%" }}
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
             >
@@ -59,6 +53,8 @@ const About = ({ isDarkMode }) => {
             </Card>
           </motion.div>
         </div>
+
+        {/* Right Section */}
         <div className="col-span-1 flex justify-center items-center p-6">
           <motion.div
             ref={animateRef}
@@ -72,66 +68,52 @@ const About = ({ isDarkMode }) => {
           >
             <Typography
               variant="h2"
-              className={`${titleColor} text-center lg:text-left`}
+              className={`${themeStyles.titleColor} text-center lg:text-left`}
             >
               Hi, I'm <span className="text-cyan-400">Rinaldi A Prayuda</span>
             </Typography>
             <Typography
               variant="h3"
-              className={`${titleColor} mb-4 text-center lg:text-left`}
+              className={`${themeStyles.titleColor} mb-4 text-center lg:text-left`}
             >
               a Web Developer based in{" "}
               <span className="text-cyan-400">Indonesia</span>
             </Typography>
             <Typography
-              className={`${cardTextColor} text-xl mb-8 text-justify`}
+              className={`${themeStyles.cardTextColor} text-sm mb-8 text-justify lg:text-lg`}
             >
-              Passionate computer technology enthusiast who specializes in web
-              development and wants to contribute as a programmer. Proficient in
-              front-end technologies such as HTML, CSS, JavaScript, and React,
-              bootstrap and back-end development using Codeignter4. Proactive
-              and dedicated to continuous learning, I am excited about
-              opportunities to enhance my skills and contribute to innovative
-              projects in a programming role.
+              A passionate technology enthusiast with a strong focus on web
+              development, eager to contribute as a programmer. Proficient in
+              front-end technologies including HTML, CSS, JavaScript, React, and
+              Bootstrap, as well as back-end development with CodeIgniter 4 and
+              Laravel. I am proactive, detail-oriented, and committed to
+              continuous learning, with a deep interest in staying up-to-date
+              with industry advancements. Excited to bring my technical skills
+              to dynamic projects and contribute to innovative solutions in a
+              programming role.
             </Typography>
-            <hr className={`border-t-2 px-6 pb-4 ${borderColor} w-full`} />
+            <hr
+              className={`border-t-2 px-6 pb-4 ${themeStyles.borderColor} w-full`}
+            />
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
-              <div className="flex justify-center items-center">
-                <Card
-                  className={`shadow-lg p-6 ${cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}
-                >
-                  <Typography className="font-bold text-4xl text-cyan-400 mb-2">
-                    3+
-                  </Typography>
-                  <Typography className={`text-xl ${textColor}`}>
-                    Years Of Experience
-                  </Typography>
-                </Card>
-              </div>
-              <div className="flex justify-center items-center">
-                <Card
-                  className={`shadow-lg p-6 ${cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}
-                >
-                  <Typography className="font-bold text-4xl text-cyan-400 mb-2">
-                    5+
-                  </Typography>
-                  <Typography className={`text-lg ${textColor}`}>
-                    Framework & Tech Stack Used
-                  </Typography>
-                </Card>
-              </div>
-              <div className="flex justify-center items-center">
-                <Card
-                  className={`shadow-lg p-6 ${cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}
-                >
-                  <Typography className="font-bold text-4xl text-cyan-400 mb-2">
-                    4+
-                  </Typography>
-                  <Typography className={`text-xl ${textColor}`}>
-                    Successful Projects
-                  </Typography>
-                </Card>
-              </div>
+              {[
+                { value: "5+", label: "Years Of Experience" },
+                { value: "7+", label: "Tech Stack Used" },
+                { value: "4+", label: "Successful Projects" },
+              ].map((item, index) => (
+                <div key={index} className="flex justify-center items-center">
+                  <Card
+                    className={`shadow-lg p-6 ${themeStyles.cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}
+                  >
+                    <Typography className="font-bold text-4xl text-cyan-400 mb-2">
+                      {item.value}
+                    </Typography>
+                    <Typography className={`text-xl ${themeStyles.textColor}`}>
+                      {item.label}
+                    </Typography>
+                  </Card>
+                </div>
+              ))}
             </div>
           </motion.div>
         </div>

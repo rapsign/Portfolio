@@ -11,26 +11,22 @@ import {
 } from "@material-tailwind/react";
 import { CalendarDaysIcon, MapIcon } from "@heroicons/react/24/solid";
 import { useRef } from "react";
+import { getThemeStyles } from "../utils/themeStyles";
 
 const Education = ({ isDarkMode }) => {
-  const bgColor = isDarkMode ? "bg-[#0e1b31]" : "bg-gray-100";
-  const textColor = isDarkMode ? "text-gray-100" : "text-[#3a3a3c]";
-  const borderColor = isDarkMode ? "border-gray-300" : "border-[#3a3a3c]";
-  const cardBgColor = isDarkMode ? "bg-[#081c3d]" : "bg-white";
-  const cardTextColor = isDarkMode ? "text-white" : "text-[#3a3a3c]";
-  const titleColor = isDarkMode ? "text-white" : "text-[#3a3a3c]";
+  const themeStyles = getThemeStyles(isDarkMode);
   const animateRef = useRef(null);
   const animateInView = useInView(animateRef, { once: true });
 
   return (
     <section
       id="education"
-      className={`${bgColor} min-h-screen flex flex-col items-center `}
+      className={`${themeStyles.bgColor} min-h-screen flex flex-col items-center `}
     >
-      <h1 className={`text-5xl mt-20 font-bold my-5 ${titleColor}`}>
+      <h1 className={`text-5xl mt-20 font-bold my-5 ${themeStyles.titleColor}`}>
         Educations
       </h1>
-      <hr className={`border-t-8 ${borderColor} w-24 mb-5`} />
+      <hr className={`border-t-8 ${themeStyles.borderColor} w-24 mb-5`} />
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 w-full">
         <div className="col-span-1 flex justify-center items-center p-6">
           <motion.div
@@ -46,14 +42,14 @@ const Education = ({ isDarkMode }) => {
             <h1 className="text-4xl font-bold text-cyan-400 mb-3 ">
               Educations & Experiences
             </h1>
-            <h2 className={`text-lg ${cardTextColor}`}>
+            <h2 className={`text-lg ${themeStyles.cardTextColor}`}>
               There are some formal education & work experience.
             </h2>
           </motion.div>
         </div>
         <div className="col-span-2 flex justify-center items-center p-6 lg:justify-end">
           <Card
-            className={`w-full max-w-3xl p-6 shadow-lg flex flex-col items-center ${cardBgColor}`}
+            className={`w-full max-w-3xl p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor}`}
           >
             <motion.div
               ref={animateRef}
@@ -78,7 +74,7 @@ const Education = ({ isDarkMode }) => {
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
                         variant="h5"
-                        className={`${textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
+                        className={`${themeStyles.textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
                       >
                         Sriwijaya State Polytechnic
                       </Typography>
@@ -86,20 +82,20 @@ const Education = ({ isDarkMode }) => {
                     <TimelineBody className="pb-8">
                       <Typography
                         variant="small"
-                        className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}
+                        className={`${themeStyles.textColor} text-sm sm:text-lg lg:text-lg mb-2`}
                       >
                         Computer Engineering
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center mb-2 ${textColor}`}
+                        className={`font-normal flex items-center mb-2 ${themeStyles.textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2" /> Palembang,
                         Indonesia
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center ${textColor}`}
+                        className={`font-normal flex items-center ${themeStyles.textColor}`}
                       >
                         <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2019 -
                         2022
@@ -112,27 +108,27 @@ const Education = ({ isDarkMode }) => {
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
                         variant="h5"
-                        className={`${textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
+                        className={`${themeStyles.textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
                       >
                         State Vocational School 2
                       </Typography>
                     </TimelineHeader>
                     <TimelineBody className="pb">
                       <Typography
-                        className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}
+                        className={`${themeStyles.textColor} text-sm sm:text-lg lg:text-lg mb-2`}
                       >
                         Computer and Network Engineering
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center mb-2 ${textColor}`}
+                        className={`font-normal flex items-center mb-2 ${themeStyles.textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2 " /> Palembang,
                         Indonesia
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center ${textColor}`}
+                        className={`font-normal flex items-center ${themeStyles.textColor}`}
                       >
                         <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2016 -
                         2019
@@ -154,26 +150,26 @@ const Education = ({ isDarkMode }) => {
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
                         variant="h5"
-                        className={`${textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
+                        className={`${themeStyles.textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
                       >
                         IIPC Abu Dhabi
                       </Typography>
                     </TimelineHeader>
                     <TimelineBody className="pb-8">
                       <Typography
-                        className={`${textColor} text-sm sm:text-lg lg:text-lg mb-2`}
+                        className={`${themeStyles.textColor} text-sm sm:text-lg lg:text-lg mb-2`}
                       >
                         Internship
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center mb-2 ${textColor}`}
+                        className={`font-normal flex items-center mb-2 ${themeStyles.textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2 " /> Abu Dhabi, UAE
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center ${textColor}`}
+                        className={`font-normal flex items-center ${themeStyles.textColor}`}
                       >
                         <CalendarDaysIcon className="w-4 h-4 mr-2" /> March 2024
                       </Typography>
