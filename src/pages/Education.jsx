@@ -23,10 +23,10 @@ const Education = ({ isDarkMode }) => {
       id="education"
       className={`${themeStyles.bgColor} min-h-screen flex flex-col items-center `}
     >
-      <h1 className={`text-5xl mt-20 font-bold my-5 ${themeStyles.titleColor}`}>
+      <h1 className={`text-3xl mt-20 font-bold my-5 ${themeStyles.titleColor}`}>
         Educations
       </h1>
-      <hr className={`border-t-8 ${themeStyles.borderColor} w-24 mb-5`} />
+      <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 w-full">
         <div className="col-span-1 flex justify-center items-center p-6">
           <motion.div
@@ -39,10 +39,10 @@ const Education = ({ isDarkMode }) => {
             transition={{ duration: 1.5 }}
             className="p-6 lg:text-left sm:text-center text-center"
           >
-            <h1 className="text-4xl font-bold text-cyan-400 mb-3 ">
+            <h1 className="text-2xl font-semibold text-cyan-400 mb-3 ">
               Educations & Experiences
             </h1>
-            <h2 className={`text-lg ${themeStyles.cardTextColor}`}>
+            <h2 className={`text-md ${themeStyles.cardTextColor}`}>
               There are some formal education & work experience.
             </h2>
           </motion.div>
@@ -63,7 +63,7 @@ const Education = ({ isDarkMode }) => {
             >
               <div className="col-span-2 flex flex-col justify-start items-start p-3">
                 <div className="mb-5">
-                  <Typography variant="h4" className="text-cyan-400">
+                  <Typography variant="h5" className="text-cyan-400">
                     Educations
                   </Typography>
                 </div>
@@ -73,8 +73,8 @@ const Education = ({ isDarkMode }) => {
                     <TimelineHeader className="h-3">
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
-                        variant="h5"
-                        className={`${themeStyles.textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
+                        variant="h6"
+                        className={`${themeStyles.textColor} text-sm sm:text-md md:text-lg lg:text-xl`}
                       >
                         Sriwijaya State Polytechnic
                       </Typography>
@@ -82,20 +82,20 @@ const Education = ({ isDarkMode }) => {
                     <TimelineBody className="pb-8">
                       <Typography
                         variant="small"
-                        className={`${themeStyles.textColor} text-sm sm:text-lg lg:text-lg mb-2`}
+                        className={`${themeStyles.textColor} text-sm  my-2`}
                       >
                         Computer Engineering
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center mb-2 ${themeStyles.textColor}`}
+                        className={`flex items-center mb-2 ${themeStyles.textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2" /> Palembang,
                         Indonesia
                       </Typography>
                       <Typography
                         variant="small"
-                        className={`font-normal flex items-center ${themeStyles.textColor}`}
+                        className={`flex items-center ${themeStyles.textColor}`}
                       >
                         <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2019 -
                         2022
@@ -108,14 +108,14 @@ const Education = ({ isDarkMode }) => {
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
                         variant="h5"
-                        className={`${themeStyles.textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
+                        className={`${themeStyles.textColor} text-sm sm:text-md md:text-lg lg:text-xl`}
                       >
                         State Vocational School 2
                       </Typography>
                     </TimelineHeader>
                     <TimelineBody className="pb">
                       <Typography
-                        className={`${themeStyles.textColor} text-sm sm:text-lg lg:text-lg mb-2`}
+                        className={`${themeStyles.textColor} text-sm my-2`}
                       >
                         Computer and Network Engineering
                       </Typography>
@@ -139,7 +139,7 @@ const Education = ({ isDarkMode }) => {
               </div>
               <div className="col-span-1 flex flex-col justify-start items-start p-2">
                 <div className="mb-5">
-                  <Typography variant="h4" className="text-cyan-400">
+                  <Typography variant="h5" className="text-cyan-400">
                     Experience
                   </Typography>
                 </div>
@@ -150,14 +150,14 @@ const Education = ({ isDarkMode }) => {
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
                         variant="h5"
-                        className={`${themeStyles.textColor} text-sm sm:text-xl md:text-2xl lg:text-2xl`}
+                        className={`${themeStyles.textColor} text-sm sm:text-md md:text-lg lg:text-xl`}
                       >
                         IIPC Abu Dhabi
                       </Typography>
                     </TimelineHeader>
                     <TimelineBody className="pb-8">
                       <Typography
-                        className={`${themeStyles.textColor} text-sm sm:text-lg lg:text-lg mb-2`}
+                        className={`${themeStyles.textColor} text-sm my-2`}
                       >
                         Internship
                       </Typography>

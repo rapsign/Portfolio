@@ -10,21 +10,18 @@ module.exports = withMT({
   theme: {
     extend: {
       colors: {
-        primary: '#3c3c3c', 
-        secondary: '#3C3C3C', 
-        accent: '#f6f6f6',
+        primary: "#3c3c3c",
+        secondary: "#3C3C3C",
+        accent: "#f6f6f6",
         border: {
-          primary: '#3c3c3c', 
-          secondary: '#3C3C3C', 
+          primary: "#3c3c3c",
+          secondary: "#3C3C3C",
         },
         button: {
-          primary: '#26c6da', 
-          secondary: '#3C3C3C', 
-          accent: '#f6f6f6', 
-        }    
-      },
-      fontFamily: {
-        futura: ['LTC Bodoni 175 W01 Regular'],
+          primary: "#26c6da",
+          secondary: "#3C3C3C",
+          accent: "#f6f6f6",
+        },
       },
     },
   },

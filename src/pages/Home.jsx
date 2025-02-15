@@ -54,11 +54,11 @@ const Home = ({ isDarkMode }) => {
                 HI, WELCOME
               </h4>
               <h1
-                className={`text-6xl lg:text-8xl sm:text-7xl font-bold ${textColor}`}
+                className={`text-6xl lg:text-8xl sm:text-7xl font-semibold ${textColor}`}
               >
                 I'M{" "}
                 <span
-                  className={`text-6xl lg:text-8xl sm:text-7xl font-bold ${highlightColor}`}
+                  className={`text-6xl lg:text-8xl sm:text-7xl font-semibold ${highlightColor}`}
                 >
                   ALDI
                 </span>
@@ -71,12 +71,12 @@ const Home = ({ isDarkMode }) => {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={`rounded-full border-2 ${socialButtonColor} p-2`}
+                    className={`rounded-full border-2 ${socialButtonColor} hover:border-cyan-400 p-2`}
                     variant="outlined"
                   >
                     <img
                       src={instagramIcon}
-                      className={`w-8 h-8 ${socialButtonColor}`}
+                      className={`w-8 h-8 ${socialButtonColor} `}
                       alt="Instagram Icon"
                     />
                   </Button>
@@ -87,7 +87,7 @@ const Home = ({ isDarkMode }) => {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={`rounded-full border-2 ${socialButtonColor} p-2`}
+                    className={`rounded-full border-2 ${socialButtonColor} p-2 hover:border-cyan-400`}
                     variant="outlined"
                   >
                     <img
@@ -103,7 +103,7 @@ const Home = ({ isDarkMode }) => {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={`rounded-full border-2 ${socialButtonColor} p-2`}
+                    className={`rounded-full border-2 ${socialButtonColor} p-2 hover:border-cyan-400`}
                     variant="outlined"
                   >
                     <img
@@ -116,7 +116,7 @@ const Home = ({ isDarkMode }) => {
               </div>
               <Button
                 onClick={handleDownloadCV}
-                className={`flex items-center gap-3 bg-cyan-400 ${hoverColor}`}
+                className={`flex items-center gap-3 text-gray-900 bg-cyan-400 ${hoverColor}`}
               >
                 Download CV <ArrowDownTrayIcon className="w-5 h-5" />
               </Button>
@@ -125,9 +125,9 @@ const Home = ({ isDarkMode }) => {
           <div className="flex flex-col items-center justify-center lg:items-end lg:justify-end">
             <motion.div
               className="text-center mt-auto"
-              initial={{ opacity: 0, x: 200 }} // Initial state, hidden and moved up by 50px
-              animate={{ opacity: 1, x: 0 }} // Animate to opacity 1 and original position
-              transition={{ duration: 1 }} // Transition duration with a slight delay
+              initial={{ opacity: 0, x: 200 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 1 }}
             >
               <img
                 src={imageSource}

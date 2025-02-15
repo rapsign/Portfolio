@@ -56,7 +56,7 @@ export function FooterWithSitemap() {
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 1 }}
             transition={{ delay: 0.5, duration: 1 }}
           >
-            <Typography className="text-white mb-5 text-center font-bold text-4xl lg:text-5xl">
+            <Typography className="text-white mb-5 text-center font-bold text-3xl lg:text-4xl">
               RINALDI A PRAYUDA
             </Typography>
           </motion.div>
@@ -85,7 +85,7 @@ export function FooterWithSitemap() {
                   offset={-navbarHeight}
                   smooth={true}
                   duration={1000}
-                  className={`p-1 font-bold text-2xl cursor-pointer text-white hover:text-[#3C3C3C]`}
+                  className={`p-1 font-semibold text-xl cursor-pointer text-white hover:text-gray-900 hover:underline`}
                   onClick={() => handleLinkClick(section.id)}
                 >
                   {section.label}
@@ -226,7 +226,6 @@ export function FooterWithSitemap() {
               </Button>
             </motion.a>
           </div>
-          <p className="pt-8 text-lg text-white"></p>
         </div>
         <motion.div
           initial={{ opacity: 0, y: -50 }}
@@ -234,7 +233,7 @@ export function FooterWithSitemap() {
           transition={{ delay: 1.1, duration: 1 }}
           className="flex justify-center text-center text-white mt-2"
         >
-          <Typography>
+          <Typography className="mb-2">
             &copy; {currentYear} created by RapSign. All rights reserved
           </Typography>
         </motion.div>

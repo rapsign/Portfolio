@@ -15,11 +15,10 @@ const About = ({ isDarkMode }) => {
       id="about"
       className={`flex flex-col items-center justify-center p-6 ${themeStyles.bgColor} ${themeStyles.textColor}`}
     >
-      <h1 className={`text-5xl mt-20 font-bold mb-5 ${themeStyles.titleColor}`}>
+      <h1 className={`text-3xl mt-20 font-bold mb-5 ${themeStyles.titleColor}`}>
         About Me
       </h1>
-      <hr className={`border-t-8 ${themeStyles.borderColor} w-24 mb-5`} />
-
+      <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
       <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
         {/* Left Section */}
         <div className="col-span-1 flex justify-center items-center p-6">
@@ -67,20 +66,18 @@ const About = ({ isDarkMode }) => {
             className="flex flex-col justify-start items-start"
           >
             <Typography
-              variant="h2"
-              className={`${themeStyles.titleColor} text-center lg:text-left`}
+              className={`${themeStyles.titleColor} font-bold text-xl lg:text-3xl text-left`}
             >
               Hi, I'm <span className="text-cyan-400">Rinaldi A Prayuda</span>
             </Typography>
             <Typography
-              variant="h3"
-              className={`${themeStyles.titleColor} mb-4 text-center lg:text-left`}
+              className={`${themeStyles.titleColor} mb-4 font-bold text-md lg:text-3xl lg:text-left`}
             >
               a Web Developer based in{" "}
               <span className="text-cyan-400">Indonesia</span>
             </Typography>
             <Typography
-              className={`${themeStyles.cardTextColor} text-sm mb-8 text-justify lg:text-lg`}
+              className={`${themeStyles.cardTextColor} text-sm mb-8 text-justify lg:text-left lg:text-lg`}
             >
               A passionate technology enthusiast with a strong focus on web
               development, eager to contribute as a programmer. Proficient in

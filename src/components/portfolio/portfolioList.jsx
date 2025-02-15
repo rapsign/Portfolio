@@ -2,9 +2,10 @@ import { useRef } from "react";
 import PortfolioCard from "./portfolioCard";
 import portfolios from "../../assets/json/portfolio.json";
 import { motion, useInView } from "framer-motion";
+import { getThemeStyles } from "../../utils/themeStyles";
 
 const PortfolioList = ({ isDarkMode }) => {
-  const borderColor = isDarkMode ? "border-gray-300" : "border-secondary";
+  const themeStyles = getThemeStyles(isDarkMode);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -14,8 +15,8 @@ const PortfolioList = ({ isDarkMode }) => {
       className="flex flex-col items-center justify-center"
     >
       <div className="flex flex-col items-center justify-center">
-        <h1 className="text-5xl mt-20 font-bold my-5">Portfolio</h1>
-        <hr className={`border-t-8 ${borderColor} w-24 mb-5`} />
+        <h1 className="text-3xl mt-20 font-bold my-5">Portfolio</h1>
+        <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
       </div>
       <motion.div
         ref={ref}
@@ -24,10 +25,10 @@ const PortfolioList = ({ isDarkMode }) => {
         transition={{ duration: 0.5 }}
         className="w-full p-6 px-12 text-center lg:text-left sm:text-center"
       >
-        <h1 className="text-4xl font-bold mb-3 text-cyan-400">
+        <h1 className="text-2xl font-semibold mb-3 text-cyan-400">
           Projects I've Created
         </h1>
-        <p className="text-lg">
+        <p className="text-md">
           I've created a few projects while learning about website development,
           and I'll explain each of them below.
         </p>

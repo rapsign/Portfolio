@@ -40,14 +40,14 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
 
   const handleLinkClick = (link) => {
     setActiveLink(link);
-    setOpenNav(false); // Close navbar on mobile when a link is clicked
+    setOpenNav(false);
   };
 
   const calculateOffset = () => {
     if (navbarRef.current) {
       return -navbarRef.current.offsetHeight;
     }
-    return -100; // Fallback offset
+    return -100;
   };
 
   const navList = (
@@ -59,8 +59,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={calculateOffset()} // Offset for the fixed navbar height
-          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400 ${
+          offset={calculateOffset()}
+          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400 ${
             activeLink === "home" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("home")}
@@ -75,8 +75,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={calculateOffset()} // Offset for the fixed navbar height
-          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
+          offset={calculateOffset()}
+          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "about" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("about")}
@@ -91,8 +91,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={calculateOffset()} // Offset for the fixed navbar height
-          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
+          offset={calculateOffset()}
+          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "skill" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("skill")}
@@ -107,8 +107,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={calculateOffset()} // Offset for the fixed navbar height
-          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
+          offset={calculateOffset()}
+          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "education" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("education")}
@@ -123,8 +123,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={calculateOffset()} // Offset for the fixed navbar height
-          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
+          offset={calculateOffset()}
+          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "portfolio" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("portfolio")}
@@ -139,8 +139,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           spy={true}
           smooth={true}
           duration={1000}
-          offset={calculateOffset()} // Offset for the fixed navbar height
-          className={`p-1 font-bold text-2xl cursor-pointer hover:text-cyan-400  ${
+          offset={calculateOffset()}
+          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "contact" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("contact")}
@@ -161,8 +161,8 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
             } 
             ${
               isDarkMode
-                ? "bg-[#0e1b31] text-white"
-                : "bg-gray-100 text-[#3c3c3c]"
+                ? "bg-[#121212] text-gray-100"
+                : "bg-gray-100 text-gray-900"
             } border-none `}
       >
         <div className="container mx-auto">
@@ -178,19 +178,19 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
               <IconButton
                 onClick={toggleDarkMode}
                 className={`h-14 w-14 rounded-full flex items-center justify-center shadow-xl ${
-                  isDarkMode ? "bg-gray-700" : "bg-white"
+                  isDarkMode ? "bg-cyan-400" : "bg-gray-800"
                 }`}
               >
                 {isDarkMode ? (
-                  <SunIcon className="w-5 h-5 text-white" />
+                  <SunIcon className="w-5 h-5 text-gray-900" />
                 ) : (
-                  <MoonIcon className="w-5 h-5 text-[#3c3c3c]" />
+                  <MoonIcon className="w-5 h-5 text-gray-100" />
                 )}
               </IconButton>
 
               <IconButton
                 variant="text"
-                className="ml-auto h-16 w-16 text-inherit bg-cyan-400 text-white hover:bg-transparent focus:bg-cyan-400 active:bg-cyan-400 lg:hidden"
+                className="ml-auto h-16 w-16 text-inherit bg-cyan-400 text-gray-100 hover:bg-transparent focus:bg-cyan-400 active:bg-cyan-400 lg:hidden"
                 ripple={false}
                 onClick={() => setOpenNav(!openNav)}
                 aria-label={openNav ? "Close Navigation" : "Open Navigation"}

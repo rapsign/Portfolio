@@ -8,10 +8,10 @@ export const themeStyle = {
     titleColor: "text-primary",
   },
   dark: {
-    bgColor: "bg-[#0e1b31]",
+    bgColor: "bg-[#121212]",
     textColor: "text-gray-100",
     borderColor: "border-gray-300",
-    cardBgColor: "bg-[#081c3d]",
+    cardBgColor: "bg-gray-900",
     cardTextColor: "text-white",
     titleColor: "text-white",
   },

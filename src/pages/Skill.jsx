@@ -4,14 +4,10 @@ import { Card, Button } from "@material-tailwind/react";
 import { CodeBracketIcon, CommandLineIcon } from "@heroicons/react/24/solid";
 import techStackData from "../assets/json/techStack.json";
 import toolsData from "../assets/json/tools.json";
+import { getThemeStyles } from "../utils/themeStyles";
 
 const Skill = ({ isDarkMode }) => {
-  const bgColor = isDarkMode ? "bg-[#0e1b31]" : "bg-gray-100";
-  const textColor = isDarkMode ? "text-gray-100" : "text-[#3a3a3c]";
-  const borderColor = isDarkMode ? "border-gray-300" : "border-[#3a3a3c]";
-  const cardBgColor = isDarkMode ? "bg-[#081c3d]" : "bg-white";
-  const cardTextColor = isDarkMode ? "text-white" : "text-[#3a3a3c]";
-  const titleColor = isDarkMode ? "text-white" : "text-[#3a3a3c]";
+  const themeStyles = getThemeStyles(isDarkMode);
   const [hoveredSkill, setHoveredSkill] = useState(null);
   const [showTechStack, setShowTechStack] = useState(true);
 
@@ -38,10 +34,12 @@ const Skill = ({ isDarkMode }) => {
   return (
     <section
       id="skill"
-      className={`${bgColor} min-h-screen flex flex-col items-center lg:top-20`}
+      className={`${themeStyles.bgColor} min-h-screen flex flex-col items-center lg:top-20`}
     >
-      <h1 className={`text-5xl font-bold mt-20 ${titleColor}`}>My Skills</h1>
-      <hr className={`border-t-8 ${borderColor} w-24 my-5`} />
+      <h1 className={`text-3xl font-bold mt-20 ${themeStyles.titleColor}`}>
+        My Skills
+      </h1>
+      <hr className={`border-t-4 ${themeStyles.borderColor} w-24 my-5`} />
       <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-5">
         <motion.div
           className="col-span-1 order-last flex justify-center items-center p-6 lg:justify-end lg:order-first"
@@ -50,7 +48,7 @@ const Skill = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
         >
           <Card
-            className={`w-full p-6 shadow-lg flex flex-col items-center ${cardBgColor}`}
+            className={`w-full p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor}`}
           >
             <div className="flex justify-center my-5">
               <button
@@ -118,10 +116,10 @@ const Skill = ({ isDarkMode }) => {
             transition={{ duration: 1.5, delay: 1.5 }}
             className="px-6 lg:text-right sm:text-center text-center"
           >
-            <h1 className="text-4xl font-bold text-cyan-400 mb-3">
+            <h1 className="text-2xl font-semibold text-cyan-400 mb-3">
               Tech Stack & Tools
             </h1>
-            <h2 className={`text-lg ${cardTextColor}`}>
+            <h2 className={`text-md ${themeStyles.cardTextColor}`}>
               There are some tech stacks and tools that I use in building and
               running a web application.
             </h2>
@@ -154,8 +152,8 @@ const InViewSkill = ({
     >
       <motion.div whileHover={{ y: -10 }}>
         <Button
-          className={`flex justify-center cursor-default items-center w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full shadow-md p-0 ${
-            isDarkMode ? "bg-[#0a244d] shadow-lg" : "bg-white shadow"
+          className={`flex justify-center cursor-default items-center w-16 h-16 sm:w-16 sm:h-16 md:w-20 md:h-20 lg:w-20 lg:h-20 rounded-full shadow-xl p-0 ${
+            isDarkMode ? "bg-gray-800 " : "bg-gray-100 "
           }`}
           onMouseEnter={() => handleMouseEnter(skill.name)}
           onMouseLeave={handleMouseLeave}
@@ -164,14 +162,14 @@ const InViewSkill = ({
         </Button>
       </motion.div>
       <span
-        className={`mt-3 text-lg text-center font-bold ${
-          isDarkMode ? "text-white" : "text-[#3a3a3c]"
+        className={`mt-3 text-sm text-center font-semibold ${
+          isDarkMode ? "text-gray-100" : "text-gray-900"
         }`}
       >
         {skill.name}
       </span>
       <span
-        className={`text-sm ${isDarkMode ? "text-gray-100" : "text-[#3a3a3c]"}`}
+        className={`text-xs ${isDarkMode ? "text-gray-100" : "text-gray-900"}`}
       >
         {skill.level}
       </span>
@@ -183,7 +181,9 @@ const InViewSkill = ({
             exit={{ y: 20, opacity: 0 }}
             transition={{ type: "spring", stiffness: 200, damping: 10 }}
             className={`z-50 absolute ${
-              isDarkMode ? "bg-[#0e1b31] text-white" : "bg-white text-[#3a3a3c]"
+              isDarkMode
+                ? "bg-gray-800 text-white"
+                : "bg-gray-100 text-gray-900"
             } shadow-md p-1 rounded-lg transform -translate-x-1/2 -bottom-full`}
             style={{ width: "300px", bottom: "calc(100% + 10px)" }}
           >

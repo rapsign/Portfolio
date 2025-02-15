@@ -33,8 +33,8 @@ const Contact = ({ isDarkMode }) => {
       className="flex flex-col items-center justify-center mb-10"
     >
       <div className="flex flex-col items-center justify-center ">
-        <h1 className="text-5xl mt-20 font-bold my-5">Contact</h1>
-        <hr className={`border-t-8 ${themeStyles.borderColor} w-24 mb-5`} />
+        <h1 className="text-3xl mt-20 font-bold my-5">Contact</h1>
+        <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
       </div>
       <motion.div
         ref={ref}
@@ -43,10 +43,10 @@ const Contact = ({ isDarkMode }) => {
         transition={{ duration: 0.5 }}
         className="w-full p-6 px-12 text-center lg:text-left sm:text-center"
       >
-        <h1 className="text-4xl font-bold mb-3 text-cyan-400">
+        <h1 className="text-2xl font-bold mb-3 text-cyan-400">
           Feel Free To Contact Me
         </h1>
-        <p className="text-lg">
+        <p className="text-md">
           I'm always open to discussing product design, collaborating work or
           partnerships. Just contact me with the media below.
         </p>
