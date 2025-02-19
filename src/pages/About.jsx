@@ -13,7 +13,7 @@ const About = ({ isDarkMode }) => {
   return (
     <section
       id="about"
-      className={`flex flex-col items-center justify-center p-6 ${themeStyles.bgColor} ${themeStyles.textColor}`}
+      className={`flex flex-col items-center justify-center ${themeStyles.bgColor} ${themeStyles.textColor}`}
     >
       <h1 className={`text-3xl mt-20 font-bold mb-5 ${themeStyles.titleColor}`}>
         About Me
@@ -66,18 +66,18 @@ const About = ({ isDarkMode }) => {
             className="flex flex-col justify-start items-start"
           >
             <Typography
-              className={`${themeStyles.titleColor} font-bold text-xl lg:text-3xl text-left`}
+              className={`${themeStyles.titleColor} font-bold text-lg lg:text-3xl text-left`}
             >
               Hi, I'm <span className="text-cyan-400">Rinaldi A Prayuda</span>
             </Typography>
             <Typography
-              className={`${themeStyles.titleColor} mb-4 font-bold text-md lg:text-3xl lg:text-left`}
+              className={`${themeStyles.titleColor} mb-2 font-bold text-lg lg:text-3xl lg:text-left`}
             >
               a Web Developer based in{" "}
               <span className="text-cyan-400">Indonesia</span>
             </Typography>
             <Typography
-              className={`${themeStyles.cardTextColor} text-sm mb-8 text-justify lg:text-left lg:text-lg`}
+              className={`${themeStyles.cardTextColor} text-sm mb-8 text-left lg:text-lg`}
             >
               A passionate technology enthusiast with a strong focus on web
               development, eager to contribute as a programmer. Proficient in

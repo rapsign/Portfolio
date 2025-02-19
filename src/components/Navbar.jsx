@@ -60,7 +60,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           smooth={true}
           duration={1000}
           offset={calculateOffset()}
-          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400 ${
+          className={`p-1 font-semibold text-xl cursor-pointer hover:text-cyan-400 ${
             activeLink === "home" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("home")}
@@ -76,7 +76,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           smooth={true}
           duration={1000}
           offset={calculateOffset()}
-          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
+          className={`p-1 font-semibold text-xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "about" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("about")}
@@ -92,7 +92,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           smooth={true}
           duration={1000}
           offset={calculateOffset()}
-          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
+          className={`p-1 font-semibold text-xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "skill" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("skill")}
@@ -108,7 +108,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           smooth={true}
           duration={1000}
           offset={calculateOffset()}
-          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
+          className={`p-1 font-semibold text-xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "education" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("education")}
@@ -124,7 +124,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           smooth={true}
           duration={1000}
           offset={calculateOffset()}
-          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
+          className={`p-1 font-semibold text-xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "portfolio" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("portfolio")}
@@ -140,7 +140,7 @@ export function StickyNavbar({ isDarkMode, toggleDarkMode }) {
           smooth={true}
           duration={1000}
           offset={calculateOffset()}
-          className={`p-1 font-semibold text-2xl cursor-pointer hover:text-cyan-400  ${
+          className={`p-1 font-semibold text-xl cursor-pointer hover:text-cyan-400  ${
             activeLink === "contact" ? "underline text-cyan-400" : ""
           }`}
           onClick={() => handleLinkClick("contact")}

@@ -91,90 +91,69 @@ const Contact = ({ isDarkMode }) => {
         <form onSubmit={handleSubmit} className="space-y-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="col-span-2 sm:col-span-1">
-              <Typography
-                tag="label"
-                className="block text-sm font-medium mb-2"
-              >
-                First Name
-              </Typography>
               <Input
                 type="text"
+                label="First Name"
                 id="firstName"
                 name="firstName"
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                placeholder="Enter your First Name"
-                className="w-full border-cyan-400"
+                color={themeStyles.outlineColor}
+                className="w-full"
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <Typography
-                tag="label"
-                className="block text-sm font-medium mb-2"
-              >
-                Last Name
-              </Typography>
               <Input
+                label="Last Name"
                 type="text"
                 id="lastName"
                 name="lastName"
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                placeholder="Enter your last name"
-                className="w-full border-cyan-400"
+                color={themeStyles.outlineColor}
+                className="w-full"
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <Typography
-                tag="label"
-                className="block text-sm font-medium mb-2"
-              >
-                Your Email
-              </Typography>
               <Input
+                label="Your Email"
                 type="email"
                 id="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
                 required
-                placeholder="Enter your email"
-                className="w-full border-cyan-400"
+                color={themeStyles.outlineColor}
+                className="w-full"
               />
             </div>
             <div className="col-span-2 sm:col-span-1">
-              <Typography
-                tag="label"
-                className="block text-sm font-medium mb-2"
-              >
-                Subject
-              </Typography>
               <Input
+                label="Subject"
                 type="text"
                 id="subject"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
                 required
-                placeholder="Enter your subject"
-                className="w-full border-cyan-400"
+                color={themeStyles.outlineColor}
+                className="w-full"
               />
             </div>
           </div>
           <div className="col-span-2">
-            <Typography tag="label" className="block text-sm font-medium mb-2">
-              Message
-            </Typography>
             <Textarea
+              label=" Message"
               rows="4"
-              required
-              className="w-full border-cyan-400"
               id="message"
               name="message"
+              required
               value={formData.message}
               onChange={handleChange}
+              color={themeStyles.outlineColor}
+              className="w-full"
             />
           </div>
           <div className="col-span-2">

@@ -1,26 +1,26 @@
 [
-    { 
-      "name": "Visual Studio Code", 
-      "level": "Basic", 
-      "img": "/img/svg/vscode.svg", 
-      "desc": "Lightweight, open-source code editor with Git integration" 
-    },
-    { 
-      "name": "Git", 
-      "level": "Basic", 
-      "img": "/img/svg/git.svg", 
-      "desc": "Distributed version control system for tracking code changes."
-    },
-    { 
-      "name": "GitHub", 
-      "level": "Basic", 
-      "img": "/img/svg/github.svg", 
-      "desc": "Web-based platform for hosting Git repositories." 
-    },
-    { 
-      "name": "Xampp", 
-      "level": "Basic", 
-      "img": "/img/svg/xampp.svg", 
-      "desc": "Cross-platform web server solution for local development." 
-    }
-  ]
+  {
+    "name": "Visual Studio Code",
+    "level": "Basic",
+    "img": "/img/svg/vscode.svg",
+    "desc": "Lightweight, open-source code editor with Git integration"
+  },
+  {
+    "name": "Git",
+    "level": "Basic",
+    "img": "/img/svg/git.svg",
+    "desc": "Distributed version control system for tracking code changes."
+  },
+  {
+    "name": "GitHub",
+    "level": "Basic",
+    "img": "/img/svg/github.svg",
+    "desc": "Web-based platform for hosting Git repositories."
+  },
+  {
+    "name": "Xampp",
+    "level": "Basic",
+    "img": "/img/svg/xampp.svg",
+    "desc": "Cross-platform web server solution for local development."
+  }
+]

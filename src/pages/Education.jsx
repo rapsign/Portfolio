@@ -27,8 +27,8 @@ const Education = ({ isDarkMode }) => {
         Educations
       </h1>
       <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 w-full">
-        <div className="col-span-1 flex justify-center items-center p-6">
+      <div className="grid grid-cols-1  lg:grid-cols-10 w-full">
+        <div className="col-span-2 flex justify-center items-center p-6">
           <motion.div
             ref={animateRef}
             initial={{ opacity: 0, x: -100 }}
@@ -47,9 +47,9 @@ const Education = ({ isDarkMode }) => {
             </h2>
           </motion.div>
         </div>
-        <div className="col-span-2 flex justify-center items-center p-6 lg:justify-end">
+        <div className="col-span-8 flex justify-center items-center p-6 lg:justify-end">
           <Card
-            className={`w-full max-w-3xl p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor}`}
+            className={`w-full max-w-4xl p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor} rounded-lg`}
           >
             <motion.div
               ref={animateRef}
@@ -59,46 +59,40 @@ const Education = ({ isDarkMode }) => {
                 x: animateInView ? 0 : 100,
               }}
               transition={{ duration: 1.5 }}
-              className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4"
+              className="grid grid-cols-1 lg:grid-cols-6 gap-2"
             >
-              <div className="col-span-2 flex flex-col justify-start items-start p-3">
-                <div className="mb-5">
-                  <Typography variant="h5" className="text-cyan-400">
-                    Educations
-                  </Typography>
-                </div>
+              {/* Education Section */}
+              <div className="col-span-3 flex flex-col items-start p-2">
+                <Typography variant="h5" className="text-cyan-400 mb-4">
+                  Educations
+                </Typography>
                 <Timeline>
                   <TimelineItem>
                     <TimelineConnector />
                     <TimelineHeader className="h-3">
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
-                        variant="h6"
-                        className={`${themeStyles.textColor} text-sm sm:text-md md:text-lg lg:text-xl`}
+                        className={`${themeStyles.textColor} font-semibold text-xs md:text-lg `}
+                      >
+                        Associate Degree in Computer Engineering
+                      </Typography>
+                    </TimelineHeader>
+                    <TimelineBody className="pb-4">
+                      <Typography
+                        className={`${themeStyles.textColor} text-xs md:text-sm mb-2`}
                       >
                         Sriwijaya State Polytechnic
                       </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb-8">
                       <Typography
-                        variant="small"
-                        className={`${themeStyles.textColor} text-sm  my-2`}
-                      >
-                        Computer Engineering
-                      </Typography>
-                      <Typography
-                        variant="small"
-                        className={`flex items-center mb-2 ${themeStyles.textColor}`}
+                        className={`flex items-center text-xs md:text-sm mb-2 ${themeStyles.textColor}`}
                       >
                         <MapIcon className="w-4 h-4 mr-2" /> Palembang,
                         Indonesia
                       </Typography>
                       <Typography
-                        variant="small"
-                        className={`flex items-center ${themeStyles.textColor}`}
+                        className={`flex items-center text-xs md:text-sm ${themeStyles.textColor}`}
                       >
-                        <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2019 -
-                        2022
+                        <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2022
                       </Typography>
                     </TimelineBody>
                   </TimelineItem>
@@ -107,71 +101,66 @@ const Education = ({ isDarkMode }) => {
                     <TimelineHeader className="h-3">
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
-                        variant="h5"
-                        className={`${themeStyles.textColor} text-sm sm:text-md md:text-lg lg:text-xl`}
-                      >
-                        State Vocational School 2
-                      </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb">
-                      <Typography
-                        className={`${themeStyles.textColor} text-sm my-2`}
+                        className={`${themeStyles.textColor} font-semibold text-xs md:text-lg`}
                       >
                         Computer and Network Engineering
                       </Typography>
+                    </TimelineHeader>
+                    <TimelineBody className="pb-4">
                       <Typography
-                        variant="small"
-                        className={`font-normal flex items-center mb-2 ${themeStyles.textColor}`}
+                        className={`${themeStyles.textColor} text-xs md:text-sm mb-2`}
                       >
-                        <MapIcon className="w-4 h-4 mr-2 " /> Palembang,
+                        State Vocational School 2
+                      </Typography>
+                      <Typography
+                        className={`flex items-center mb-2 text-xs md:text-sm ${themeStyles.textColor}`}
+                      >
+                        <MapIcon className="w-4 h-4 mr-2" /> Palembang,
                         Indonesia
                       </Typography>
                       <Typography
-                        variant="small"
-                        className={`font-normal flex items-center ${themeStyles.textColor}`}
+                        className={`flex items-center text-xs md:text-sm ${themeStyles.textColor}`}
                       >
-                        <CalendarDaysIcon className="w-4 h-4 mr-2" /> 2016 -
-                        2019
+                        <CalendarDaysIcon className="w-4 h-4 mr-2 " /> 2019
                       </Typography>
                     </TimelineBody>
                   </TimelineItem>
                 </Timeline>
               </div>
-              <div className="col-span-1 flex flex-col justify-start items-start p-2">
-                <div className="mb-5">
-                  <Typography variant="h5" className="text-cyan-400">
-                    Experience
-                  </Typography>
-                </div>
+
+              {/* Experience Section */}
+              <div className="col-span-3 flex flex-col items-start p-2">
+                <Typography variant="h5" className="text-cyan-400 mb-4">
+                  Experience
+                </Typography>
                 <Timeline>
                   <TimelineItem>
                     <TimelineConnector />
                     <TimelineHeader className="h-3">
                       <TimelineIcon className="bg-cyan-400" />
                       <Typography
-                        variant="h5"
-                        className={`${themeStyles.textColor} text-sm sm:text-md md:text-lg lg:text-xl`}
+                        className={`${themeStyles.textColor} font-semibold text-xs md:text-lg`}
                       >
-                        IIPC Abu Dhabi
+                        Professional Experience
                       </Typography>
                     </TimelineHeader>
-                    <TimelineBody className="pb-8">
+                    <TimelineBody className="pb-4">
                       <Typography
-                        className={`${themeStyles.textColor} text-sm my-2`}
+                        className={`${themeStyles.textColor} text-xs md:text-sm mb-2`}
                       >
-                        Internship
+                        Indonesia Investment Promotion Centre Abu Dhabi
                       </Typography>
                       <Typography
-                        variant="small"
-                        className={`font-normal flex items-center mb-2 ${themeStyles.textColor}`}
+                        className={`text-xs md:text-sm flex items-center mb-2 ${themeStyles.textColor}`}
                       >
-                        <MapIcon className="w-4 h-4 mr-2 " /> Abu Dhabi, UAE
+                        <MapIcon className="w-4 h-4 mr-2 text-xs md:text-sm" />{" "}
+                        Abu Dhabi, UAE
                       </Typography>
                       <Typography
-                        variant="small"
-                        className={`font-normal flex items-center ${themeStyles.textColor}`}
+                        className={`flex text-xs md:text-sm items-center ${themeStyles.textColor}`}
                       >
-                        <CalendarDaysIcon className="w-4 h-4 mr-2" /> March 2024
+                        <CalendarDaysIcon className="w-4 h-4 mr-2 text-xs md:text-sm" />{" "}
+                        2024
                       </Typography>
                     </TimelineBody>
                   </TimelineItem>
