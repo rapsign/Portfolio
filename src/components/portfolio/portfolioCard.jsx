@@ -50,7 +50,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
           onMouseEnter={() => setIsHovered(true)}
           onMouseLeave={() => setIsHovered(false)}
         >
-          <CardHeader floated={false} className="h-56 relative">
+          <CardHeader floated={false} className="h-full lg:h-64 relative">
             <img
               src={portfolio.img}
               alt="web-screenshot"
@@ -102,7 +102,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
                     {portfolio.title}
                   </Typography>
                   <div
-                    className="grid grid-cols-1 lg:grid-cols-3  gap-2 mb-2 relative"
+                    className="grid grid-cols-3  gap-2 mb-2 relative"
                     style={{
                       display: "grid",
                       gridAutoFlow: "column",
@@ -153,6 +153,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
                       WebkitLineClamp: 3,
                       WebkitBoxOrient: "vertical",
                       lineHeight: "1.5em",
+                      minHeight: "4.5em",
                       maxHeight: "4.5em",
                     }}
                   >
@@ -165,6 +166,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
           <CardFooter className="pt-0 flex">
             <Button
               className="flex items-center mr-2 bg-cyan-400 text-gray-900"
+              size="sm"
               onClick={openDialog}
             >
               Details
@@ -186,6 +188,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
             {portfolio.link.trim() !== "" && (
               <Button
                 variant="outlined"
+                size="sm"
                 className="flex items-center mr-2 text-cyan-400"
                 color="cyan"
                 onClick={() => {
@@ -255,7 +258,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
           <img
             src={portfolio.img}
             alt="web-screenshot"
-            className="h-full w-full object-cover mb-4"
+            className="h-full w-full object-cover mb-4 rounded-lg"
           />
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2 mb-6">
             {portfolio.techStack.map((tech, index) => (
@@ -297,6 +300,7 @@ const PortfolioCard = ({ portfolio, isDarkMode, index }) => {
           <Button
             variant="outlined"
             color="cyan"
+            size="sm"
             onClick={closeDialog}
             className="flex items-center gap-3 h-full sm:h-auto sm:w-auto"
             onClick={() => {

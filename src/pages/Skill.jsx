@@ -34,13 +34,13 @@ const Skill = ({ isDarkMode }) => {
   return (
     <section
       id="skill"
-      className={`${themeStyles.bgColor} min-h-screen flex flex-col items-center lg:top-20`}
+      className={`${themeStyles.bgColor} min-h-auto xl:min-h-screen flex flex-col items-center lg:top-20`}
     >
       <h1 className={`text-3xl font-bold mt-20 ${themeStyles.titleColor}`}>
         My Skills
       </h1>
       <hr className={`border-t-4 ${themeStyles.borderColor} w-24 my-5`} />
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-5">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full mt-5">
         <motion.div
           className="col-span-1 order-last flex justify-center items-center p-6 lg:justify-end lg:order-first"
           initial={{ opacity: 0, y: 50 }}
@@ -48,7 +48,7 @@ const Skill = ({ isDarkMode }) => {
           transition={{ duration: 0.5 }}
         >
           <Card
-            className={`w-full p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor}`}
+            className={`w-auto lg:w-full p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor}`}
           >
             <div className="flex justify-center my-5">
               <button
@@ -57,10 +57,10 @@ const Skill = ({ isDarkMode }) => {
                   isDarkMode
                     ? showTechStack
                       ? "text-cyan-400"
-                      : "text-white"
+                      : "text-gray-100"
                     : showTechStack
                     ? "text-cyan-400"
-                    : "text-[#3c3c3c]"
+                    : "text-gray-900"
                 }`}
               >
                 <CodeBracketIcon className="inline-block mr-1" width={20} />
@@ -82,7 +82,7 @@ const Skill = ({ isDarkMode }) => {
                 Tools
               </button>
             </div>
-            <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-8 sm:gap-8 md:gap-10 justify-center my-4">
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-4 grid-cols-2 gap-8 sm:gap-8 md:gap-10 justify-center my-4">
               {showTechStack
                 ? techStackData.map((skill, index) => (
                     <InViewSkill

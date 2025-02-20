@@ -40,7 +40,7 @@ const Contact = ({ isDarkMode }) => {
         ref={ref}
         initial={{ opacity: 0, y: 200 }}
         animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 100 }}
-        transition={{ duration: 0.5 }}
+        transition={{ duration: 0.2 }}
         className="w-full p-6 px-12 text-center lg:text-left sm:text-center"
       >
         <h1 className="text-2xl font-bold mb-3 text-cyan-400">
@@ -53,7 +53,7 @@ const Contact = ({ isDarkMode }) => {
       </motion.div>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-3 gap-4 w-full pb-4 px-6">
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-4 w-full pb-4 px-6">
         <ContactCard
           link="https://wa.me/6285121101696"
           platform="WhatsApp"
@@ -89,7 +89,7 @@ const Contact = ({ isDarkMode }) => {
         className="w-full px-6 pb-4"
       >
         <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="col-span-2 sm:col-span-1">
               <Input
                 type="text"

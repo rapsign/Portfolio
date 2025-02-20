@@ -33,7 +33,7 @@ const PortfolioList = ({ isDarkMode }) => {
           and I'll explain each of them below.
         </p>
       </motion.div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 w-full sm:w-full lg:w-full px-6">
+      <div className="grid grid-cols-1  xl:grid-cols-3 lg:grid-cols-2 gap-5 w-full px-6">
         {portfolios.map((portfolio, index) => (
           <PortfolioCard
             key={portfolio.id}

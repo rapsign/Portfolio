@@ -42,23 +42,25 @@ const Home = ({ isDarkMode }) => {
   return (
     <>
       <section id="home" className="min-h-screen flex flex-col relative">
-        <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 w-full lg:mt-20">
+        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-1 xl:grid-cols-2 w-full lg:mt-20">
           <motion.div
-            className="col-span-1 flex items-center justify-center lg:items-center lg:justify-start p-6"
+            className="col-span-1 flex items-center justify-center xl:items-center xl:justify-start p-6"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            <div className="flex flex-col items-center justify-center lg:items-start lg:justify-start">
-              <h4 className={`text-xl font-medium ${textColor}`}>
+            <div className="flex flex-col items-center justify-center xl:items-start lg:justify-start">
+              <h4
+                className={`text-xl sm:text-2xl lg:text-4xl font-medium ${textColor}`}
+              >
                 HI, WELCOME
               </h4>
               <h1
-                className={`text-6xl lg:text-8xl sm:text-7xl font-semibold ${textColor}`}
+                className={`text-5xl md:text-6xl  lg:text-8xl font-bold ${textColor}`}
               >
                 I'M{" "}
                 <span
-                  className={`text-6xl lg:text-8xl sm:text-7xl font-semibold ${highlightColor}`}
+                  className={`text-5xl md:text-6xl lg:text-8xl font-bold ${highlightColor}`}
                 >
                   ALDI
                 </span>
@@ -71,12 +73,12 @@ const Home = ({ isDarkMode }) => {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={`rounded-full border-2 ${socialButtonColor} hover:border-cyan-400 p-2`}
+                    className={`rounded-full border-2 ${socialButtonColor} hover:border-cyan-400 p-3`}
                     variant="outlined"
                   >
                     <img
                       src={instagramIcon}
-                      className={`w-8 h-8 ${socialButtonColor} `}
+                      className={`w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14 ${socialButtonColor}`}
                       alt="Instagram Icon"
                     />
                   </Button>
@@ -87,12 +89,12 @@ const Home = ({ isDarkMode }) => {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={`rounded-full border-2 ${socialButtonColor} p-2 hover:border-cyan-400`}
+                    className={`rounded-full border-2 ${socialButtonColor} hover:border-cyan-400 p-3`}
                     variant="outlined"
                   >
                     <img
                       src={linkedinIcon}
-                      className="w-8 h-8"
+                      className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14"
                       alt="LinkedIn Icon"
                     />
                   </Button>
@@ -103,26 +105,29 @@ const Home = ({ isDarkMode }) => {
                   rel="noopener noreferrer"
                 >
                   <Button
-                    className={`rounded-full border-2 ${socialButtonColor} p-2 hover:border-cyan-400`}
+                    className={`rounded-full border-2 ${socialButtonColor} hover:border-cyan-400 p-3`}
                     variant="outlined"
                   >
                     <img
                       src={githubIcon}
-                      className="w-8 h-8"
+                      className="w-8 h-8 md:w-10 md:h-10 lg:w-12 lg:h-12 xl:w-14 xl:h-14"
                       alt="GitHub Icon"
                     />
                   </Button>
                 </a>
               </div>
+
               <Button
                 onClick={handleDownloadCV}
-                className={`flex items-center gap-3 text-gray-900 bg-cyan-400 ${hoverColor}`}
+                size="md"
+                className={`flex items-center my-2 gap-3  text-gray-900 bg-cyan-400 ${hoverColor}`}
               >
-                Download CV <ArrowDownTrayIcon className="w-5 h-5" />
+                Download CV{" "}
+                <ArrowDownTrayIcon className="w-4 h-4 lg:h-6 lg:w-6" />
               </Button>
             </div>
           </motion.div>
-          <div className="flex flex-col items-center justify-center lg:items-end lg:justify-end">
+          <div className="flex flex-col items-center justify-center xl:items-end xl:justify-end">
             <motion.div
               className="text-center mt-auto"
               initial={{ opacity: 0, x: 200 }}

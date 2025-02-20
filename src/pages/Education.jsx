@@ -21,13 +21,13 @@ const Education = ({ isDarkMode }) => {
   return (
     <section
       id="education"
-      className={`${themeStyles.bgColor} min-h-screen flex flex-col items-center `}
+      className={`${themeStyles.bgColor} min-h-auto xl:min-h-screen flex flex-col items-center `}
     >
       <h1 className={`text-3xl mt-20 font-bold my-5 ${themeStyles.titleColor}`}>
         Educations
       </h1>
       <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
-      <div className="grid grid-cols-1  lg:grid-cols-10 w-full">
+      <div className="grid grid-cols-1 xl:grid-cols-10 w-full">
         <div className="col-span-2 flex justify-center items-center p-6">
           <motion.div
             ref={animateRef}
@@ -49,7 +49,7 @@ const Education = ({ isDarkMode }) => {
         </div>
         <div className="col-span-8 flex justify-center items-center p-6 lg:justify-end">
           <Card
-            className={`w-full max-w-4xl p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor} rounded-lg`}
+            className={`w-auto lg:w-full max-w-4xl p-6 shadow-lg flex flex-col items-center ${themeStyles.cardBgColor} rounded-lg`}
           >
             <motion.div
               ref={animateRef}

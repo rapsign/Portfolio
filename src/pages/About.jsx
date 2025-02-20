@@ -19,7 +19,7 @@ const About = ({ isDarkMode }) => {
         About Me
       </h1>
       <hr className={`border-t-4 ${themeStyles.borderColor} w-24 mb-5`} />
-      <div className="grid grid-cols-1 lg:grid-cols-2 w-full">
+      <div className="grid grid-cols-1 xl:grid-cols-2 w-full">
         {/* Left Section */}
         <div className="col-span-1 flex justify-center items-center p-6">
           <motion.div
@@ -66,18 +66,18 @@ const About = ({ isDarkMode }) => {
             className="flex flex-col justify-start items-start"
           >
             <Typography
-              className={`${themeStyles.titleColor} font-bold text-lg lg:text-3xl text-left`}
+              className={`${themeStyles.titleColor} font-bold text-lg lg:text-4xl xl:text-3xl text-left`}
             >
               Hi, I'm <span className="text-cyan-400">Rinaldi A Prayuda</span>
             </Typography>
             <Typography
-              className={`${themeStyles.titleColor} mb-2 font-bold text-lg lg:text-3xl lg:text-left`}
+              className={`${themeStyles.titleColor} mb-2 font-bold text-lg lg:text-4xl xl:text-3xl lg:text-left`}
             >
               a Web Developer based in{" "}
               <span className="text-cyan-400">Indonesia</span>
             </Typography>
             <Typography
-              className={`${themeStyles.cardTextColor} text-sm mb-8 text-left lg:text-lg`}
+              className={`${themeStyles.cardTextColor} text-sm mb-8 text-left xl:text-lg lg:text-lg`}
             >
               A passionate technology enthusiast with a strong focus on web
               development, eager to contribute as a programmer. Proficient in
@@ -92,7 +92,7 @@ const About = ({ isDarkMode }) => {
             <hr
               className={`border-t-2 px-6 pb-4 ${themeStyles.borderColor} w-full`}
             />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 w-full">
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-4 w-full">
               {[
                 { value: "5+", label: "Years Of Experience" },
                 { value: "7+", label: "Tech Stack Used" },
@@ -100,12 +100,14 @@ const About = ({ isDarkMode }) => {
               ].map((item, index) => (
                 <div key={index} className="flex justify-center items-center">
                   <Card
-                    className={`shadow-lg p-6 ${themeStyles.cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96`}
+                    className={`shadow-lg p-6 ${themeStyles.cardBgColor} rounded-lg text-center border-b-4 border-cyan-400 w-96 `}
                   >
-                    <Typography className="font-bold text-4xl text-cyan-400 mb-2">
+                    <Typography className="font-bold text-3xl xl:text-4xl text-cyan-400 mb-2">
                       {item.value}
                     </Typography>
-                    <Typography className={`text-xl ${themeStyles.textColor}`}>
+                    <Typography
+                      className={`text-md xl:text-xl ${themeStyles.textColor}`}
+                    >
                       {item.label}
                     </Typography>
                   </Card>
