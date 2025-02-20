@@ -82,7 +82,7 @@ const Skill = ({ isDarkMode }) => {
                 Tools
               </button>
             </div>
-            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-4 grid-cols-2 gap-8 sm:gap-8 md:gap-10 justify-center my-4">
+            <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-4 grid-cols-3 gap-8 sm:gap-8 md:gap-10 justify-center my-4">
               {showTechStack
                 ? techStackData.map((skill, index) => (
                     <InViewSkill
