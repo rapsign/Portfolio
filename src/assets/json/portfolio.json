@@ -1,6 +1,31 @@
 [
-  {
+   {
     "id": "1",
+    "title": "AMP Aviation",
+    "img": "/img/portfolio/ampaviationbmkg.jpg",
+    "desc": "AMP-Project (Aeronautical Meteorology Personnel) is an application used to manage aviation meteorology personnel data, including certification processes and weather information. This application has several key features, including personnel management and certification.",
+    "github": "",
+    "link": "https://ampaviationbmkg.web.id/",
+    "techStack": [
+      {
+        "id": "laravel",
+        "svg": "/img/svg/laravel.svg",
+        "name": "Laravel"
+      },
+      {
+        "id": "tailwind",
+        "svg": "/img/svg/tailwind.svg",
+        "name": "Tailwind"
+      },
+      {
+        "id": "filament",
+        "svg": "/img/svg/filament.svg",
+        "name": "Filament"
+      }
+    ]
+  },
+  {
+    "id": "2",
     "title": "Wonderful Indonesia",
     "img": "/img/portfolio/Tourism-Web.png",
     "desc": "Wonderful Indonesia is a web-based application that provides various information and services related to tourist destinations, including reservations, payment confirmations, and booking checks. This application is built using the native PHP programming language.",
@@ -35,7 +60,7 @@
     ]
   },
   {
-    "id": "2",
+    "id": "3",
     "title": "Twiceflix",
     "img": "/img/portfolio/twiceflix.png",
     "desc": "TWICEFLIX is a React-based application designed to showcase YouTube content from the K-pop idol group TWICE. The app features a Netflix-like interface, allowing users to browse TWICE's video playlists with a responsive and engaging user experience.",
@@ -60,7 +85,7 @@
     ]
   },
   {
-    "id": "3",
+    "id": "4",
     "title": "Cloud Storage",
     "img": "/img/portfolio/Aplikasi Cloud Storage.PNG",
     "desc": "an application similar to google drive built with CodeIgniter4, MySQL, and JavaScript. which can store your files",
@@ -90,7 +115,7 @@
     ]
   },
   {
-    "id": "4",
+    "id": "5",
     "title": "Linktree Website",
     "img": "/img/portfolio/linktree.PNG",
     "desc": "The linktree website that I created contains my social media links such as Instagram, TikTok and Saweria, which I created with HTML and CSS.",
@@ -110,7 +135,7 @@
     ]
   },
   {
-    "id": "5",
+    "id": "6",
     "title": "My Portfolio Website",
     "img": "/img/portfolio/portfolio-website.PNG",
     "desc": "My portfolio website is built using Vite, Tailwind CSS, and Framer Motion technologies. It consists of 6 pages, including home, portfolio, and about me sections. The website is designed to showcase my work with modern design and smooth animations. Its goal is to provide an intuitive and engaging user experience across various devices.",
