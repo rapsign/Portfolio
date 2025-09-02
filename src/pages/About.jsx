@@ -73,21 +73,13 @@ const About = ({ isDarkMode }) => {
             <Typography
               className={`${themeStyles.titleColor} mb-2 font-bold text-lg lg:text-4xl xl:text-3xl lg:text-left`}
             >
-              a Web Developer based in{" "}
+              a Full Stack Developer based in{" "}
               <span className="text-cyan-400">Indonesia</span>
             </Typography>
             <Typography
               className={`${themeStyles.cardTextColor} text-sm mb-8 text-left xl:text-lg lg:text-lg`}
             >
-              A passionate technology enthusiast with a strong focus on web
-              development, eager to contribute as a programmer. Proficient in
-              front-end technologies including HTML, CSS, JavaScript, React, and
-              Bootstrap, as well as back-end development with CodeIgniter 4 and
-              Laravel. I am proactive, detail-oriented, and committed to
-              continuous learning, with a deep interest in staying up-to-date
-              with industry advancements. Excited to bring my technical skills
-              to dynamic projects and contribute to innovative solutions in a
-              programming role.
+             I am a passionate Full Stack Developer with a strong back-end focus using Laravel and CodeIgniter 4, while continuously growing my expertise in front-end technologies such as React, HTML, CSS, JavaScript, and Bootstrap. Experienced in building scalable and efficient web applications, I am proactive, detail-oriented, and always eager to learn new technologies.With a deep interest in staying up-to-date with industry advancements, I strive to deliver high-impact and innovative solutions. Excited to contribute my skills in both front-end and back-end development, I am committed to driving success in dynamic projects and collaborative environments.
             </Typography>
             <hr
               className={`border-t-2 px-6 pb-4 ${themeStyles.borderColor} w-full`}
