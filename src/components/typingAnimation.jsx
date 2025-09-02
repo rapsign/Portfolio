@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
-const textsToType = ["WEB DEVELOPER", "IT ENGINEER"];
+const textsToType = ["FULLSTACK WEB DEVELOPER", "IT ENGINEER"];
 const TypingAnimation = () => {
   const [textIndex, setTextIndex] = useState(0);
   const [displayedText, setDisplayedText] = useState("");
