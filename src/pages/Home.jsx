@@ -120,7 +120,7 @@ const Home = ({ isDarkMode }) => {
               <Button
                 onClick={handleDownloadCV}
                 size="md"
-                className={`flex items-center my-2 gap-3  text-gray-900 bg-cyan-400 ${hoverColor}`}
+                className={`flex items-center my-2 gap-3 rounded-full  text-gray-900 bg-cyan-400 ${hoverColor}`}
               >
                 Download CV{" "}
                 <ArrowDownTrayIcon className="w-4 h-4 lg:h-6 lg:w-6" />
