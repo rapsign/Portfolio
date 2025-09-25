@@ -164,36 +164,6 @@ const Education = ({ isDarkMode }) => {
                       </Typography>
                     </TimelineBody>
                   </TimelineItem>
-                  <TimelineItem>
-                    <TimelineConnector />
-                    <TimelineHeader className="h-3">
-                      <TimelineIcon className="bg-cyan-400" />
-                      <Typography
-                        className={`${themeStyles.textColor} font-semibold text-xs md:text-lg`}
-                      >
-                        Professional Experience
-                      </Typography>
-                    </TimelineHeader>
-                    <TimelineBody className="pb-4">
-                      <Typography
-                        className={`${themeStyles.textColor} text-xs md:text-sm mb-2`}
-                      >
-                        Indonesia Investment Promotion Centre Abu Dhabi
-                      </Typography>
-                      <Typography
-                        className={`text-xs md:text-sm flex items-center mb-2 ${themeStyles.textColor}`}
-                      >
-                        <MapIcon className="w-4 h-4 mr-2 text-xs md:text-sm" />{" "}
-                        Abu Dhabi, UAE
-                      </Typography>
-                      <Typography
-                        className={`flex text-xs md:text-sm items-center ${themeStyles.textColor}`}
-                      >
-                        <CalendarDaysIcon className="w-4 h-4 mr-2 text-xs md:text-sm" />{" "}
-                        2024
-                      </Typography>
-                    </TimelineBody>
-                  </TimelineItem>
                 </Timeline>
               </div>
             </motion.div>
