@@ -4,7 +4,7 @@
     "title": "Libralink",
     "img": "/img/portfolio/libralink.jpg",
     "desc": "Libralink is a web application I developed to simplify the process of searching, adding to a wishlist, and borrowing books online.",
-    "github": "",
+    "github": "https://github.com/rapsign/Libralink",
     "link": "",
     "techStack": [
       {
