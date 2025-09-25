@@ -84,7 +84,7 @@ const Home = ({ isDarkMode }) => {
                   </Button>
                 </a>
                 <a
-                  href="https://www.linkedin.com/in/rinaldi-a-prayuda/"
+                  href="https://www.linkedin.com/in/rinaldiaprayuda/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
