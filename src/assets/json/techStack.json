@@ -58,5 +58,11 @@
     "level": "Intermediate",
     "img": "/img/svg/tailwind.svg",
     "desc": "Utility-first CSS framework providing low-level utility classes for building custom designs without writing custom CSS."
+  },
+   {
+    "name": "Vue",
+    "level": "Basic",
+    "img": "/img/svg/Vue.svg",
+    "desc": "A progressive JavaScript framework for building modern, reactive, and component-based user interfaces."
   }
 ]
