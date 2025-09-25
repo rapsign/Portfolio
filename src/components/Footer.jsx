@@ -178,7 +178,7 @@ export function FooterWithSitemap() {
               initial={{ opacity: 0, scale: 0 }}
               animate={{ opacity: isInView ? 1 : 0, scale: isInView ? 1 : 0 }}
               transition={{ delay: 0.7, duration: 0.5 }}
-              href="https://www.linkedin.com/in/rinaldi-a-prayuda/"
+              href="https://www.linkedin.com/in/rinaldiaprayuda/"
               target="_blank"
               rel="noopener noreferrer"
               className="mx-2"
